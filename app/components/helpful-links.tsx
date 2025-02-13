@@ -23,7 +23,12 @@ export function HelpfulLinks() {
             </li>
             <li>
               <Link target="__blank" href="https://www.nakedtruth.training/" className="text-primary hover:underline">
-                Naked Truth training
+                Naked Truth Training
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank" href="https://campusministryunited.com/Documents/Porn_Again_Christian.pdf" className="text-primary hover:underline">
+                Porn Again Christian: A Frank Discussion
               </Link>
             </li>
           </ul>

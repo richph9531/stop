@@ -6,28 +6,38 @@ import { HelpfulLinks } from "./components/helpful-links"
 import { VideoResources } from "./components/video-resources"
 import Image from "next/image"
 import heroImage from '@/public/hero-image.jpg'
+import "./styles/main.css"
 
 export default function MentalHealthWebsite() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="bg-primary text-primary-foreground py-4">
+    <div className="page-container">
+      <header className="page-header">
         <div className="container mx-auto px-4">
-          <a href="/" className="hover:opacity-90 transition-opacity">
+          <a href="/" className="header-link">
             <h1 className="text-2xl font-bold">S.T.O.P. - Standing Together to Oppose Pornography</h1>
           </a>
         </div>
       </header>
 
-      <main className="flex-grow container mx-auto px-4 py-8 overflow-auto">
-        <Tabs defaultValue="home" className="space-y-4">
-          <TabsList className="sticky top-0 bg-background z-10">
-            <TabsTrigger value="home">Home</TabsTrigger>
-            <TabsTrigger value="contact">Contact Us</TabsTrigger>
-            <TabsTrigger value="helpful-links">Helpful Links</TabsTrigger>
-            <TabsTrigger value="video-resources">Video Resources</TabsTrigger>
+      <main className="main-content">
+        <Tabs defaultValue="home" className="tabs-container">
+          <TabsList className="tabs-list">
+            <TabsTrigger value="home" className="tab-trigger">
+              Home
+            </TabsTrigger>
+            <TabsTrigger value="helpful-links" className="tab-trigger">
+              Helpful Links
+            </TabsTrigger>
+            <TabsTrigger value="video-resources" className="tab-trigger">
+              Video Resources
+            </TabsTrigger>
+            <TabsTrigger value="contact" className="tab-trigger">
+              Contact Us
+            </TabsTrigger>
           </TabsList>
+
           <TabsContent value="home">
-            <Card>
+            <Card className="content-card">
               <CardHeader>
                 <div className="relative w-full h-[200px] mb-6">
                   <Image
@@ -58,8 +68,21 @@ export default function MentalHealthWebsite() {
               </CardContent>
             </Card>
           </TabsContent>
+
+          <TabsContent value="helpful-links">
+            <div className="content-container">
+              <HelpfulLinks />
+            </div>
+          </TabsContent>
+
+          <TabsContent value="video-resources">
+            <div className="content-container">
+              <VideoResources />
+            </div>
+          </TabsContent>
+
           <TabsContent value="contact">
-            <Card>
+            <Card className="content-card">
               <CardHeader>
                 <CardTitle>Contact Us</CardTitle>
                 <CardDescription>Get in touch with our support team</CardDescription>
@@ -69,7 +92,7 @@ export default function MentalHealthWebsite() {
                   {/* Social Links */}
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold">Connect With Us</h3>
-                    <div className="flex space-x-4">
+                    <div className="flex flex-col space-y-4">
                       <a
                         href="https://www.facebook.com/groups/294768610534132"
                         target="_blank"
@@ -82,7 +105,7 @@ export default function MentalHealthWebsite() {
                         <span>Facebook</span>
                       </a>
                       <a
-                        href="https://wa.me/0722129531"
+                        href="https://wa.me/<content here>"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 text-green-600 hover:text-green-800"
@@ -139,16 +162,10 @@ export default function MentalHealthWebsite() {
               </CardContent>
             </Card>
           </TabsContent>
-          <TabsContent value="helpful-links">
-            <HelpfulLinks />
-          </TabsContent>
-          <TabsContent value="video-resources">
-            <VideoResources />
-          </TabsContent>
         </Tabs>
       </main>
 
-      <footer className="bg-muted py-4 mt-auto">
+      <footer className="page-footer">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
           © S.T.O.P. 2025
         </div>

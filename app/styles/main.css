@@ -1,0 +1,42 @@
+/* Layout */
+.page-container {
+  @apply flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900;
+}
+
+.page-header {
+  @apply bg-primary text-primary-foreground py-4;
+}
+
+.header-link {
+  @apply hover:opacity-90 transition-opacity;
+}
+
+.main-content {
+  @apply flex-grow container mx-auto px-4 py-8 overflow-auto;
+}
+
+.page-footer {
+  @apply bg-muted py-4 mt-auto;
+}
+
+/* Tabs */
+.tabs-container {
+  @apply space-y-4;
+}
+
+.tabs-list {
+  @apply sticky top-0 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 w-full justify-start rounded-lg p-1 border border-gray-200 dark:border-gray-700;
+}
+
+.tab-trigger {
+  @apply data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-gray-100;
+}
+
+/* Content Cards */
+.content-card {
+  @apply bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 border-gray-200 dark:border-gray-700;
+}
+
+.content-container {
+  @apply bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 rounded-lg border border-gray-200 dark:border-gray-700 p-6;
+} 
