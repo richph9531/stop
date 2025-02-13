@@ -5,13 +5,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { HelpfulLinks } from "./components/helpful-links"
 import { VideoResources } from "./components/video-resources"
 import Image from "next/image"
+import heroImage from '@/public/hero-image.jpg'
 
 export default function MentalHealthWebsite() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-primary text-primary-foreground py-4">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold">S.T.O.P. - Standing Together to Oppose Pornography</h1>
+          <a href="/" className="hover:opacity-90 transition-opacity">
+            <h1 className="text-2xl font-bold">S.T.O.P. - Standing Together to Oppose Pornography</h1>
+          </a>
         </div>
       </header>
 
@@ -28,11 +31,13 @@ export default function MentalHealthWebsite() {
               <CardHeader>
                 <div className="relative w-full h-[200px] mb-6">
                   <Image
-                    src="/hero-image.jpg"
+                    src={heroImage}
                     alt="People supporting each other"
                     fill
                     className="object-cover rounded-t-lg"
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
                   />
                 </div>
                 <CardTitle>Welcome to S.T.O.P.</CardTitle>
