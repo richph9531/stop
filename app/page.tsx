@@ -1,16 +1,12 @@
 "use client"
 
-import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { FloatingChatbot } from "./floating-chatbot"
 import { HelpfulLinks } from "./components/helpful-links"
 import { VideoResources } from "./components/video-resources"
 import Image from "next/image"
 
 export default function MentalHealthWebsite() {
-  const [isChatbotOpen, setIsChatbotOpen] = useState(false)
-
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-primary text-primary-foreground py-4">
@@ -51,7 +47,6 @@ export default function MentalHealthWebsite() {
                 </p>
                 <ul className="list-disc pl-5 space-y-2 mt-2">
                   <li>Educational resources and information</li>
-                  <li>Support through our AI chatbot assistant</li>
                   <li>Curated helpful links and resources</li>
                   <li>Video content for recovery and education</li>
                 </ul>
@@ -153,8 +148,6 @@ export default function MentalHealthWebsite() {
           © S.T.O.P. 2025
         </div>
       </footer>
-
-      <FloatingChatbot />
     </div>
   )
 }
