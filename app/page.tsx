@@ -6,12 +6,11 @@ import { HelpfulLinks } from "./components/helpful-links"
 import { VideoResources } from "./components/video-resources"
 import Image from "next/image"
 import heroImage from '@/public/hero-image.jpg'
-import "./styles/main.css"
 
 export default function MentalHealthWebsite() {
   return (
-    <div className="page-container">
-      <header className="page-header">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+      <header className="bg-primary text-primary-foreground py-4">
         <div className="container mx-auto px-4">
           <a href="/" className="header-link">
             <h1 className="text-2xl font-bold">S.T.O.P. - Standing Together to Oppose Pornography</h1>
@@ -19,7 +18,7 @@ export default function MentalHealthWebsite() {
         </div>
       </header>
 
-      <main className="main-content">
+      <main className="flex-grow container mx-auto px-4 py-8 overflow-auto">
         <Tabs defaultValue="home" className="tabs-container">
           <TabsList className="tabs-list">
             <TabsTrigger value="home" className="tab-trigger">
@@ -165,7 +164,7 @@ export default function MentalHealthWebsite() {
         </Tabs>
       </main>
 
-      <footer className="page-footer">
+      <footer className="bg-muted py-4 mt-auto">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
           © S.T.O.P. 2025
         </div>
