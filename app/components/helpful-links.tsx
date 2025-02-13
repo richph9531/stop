@@ -17,8 +17,13 @@ export function HelpfulLinks() {
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-primary hover:underline">
-                Link 2
+              <Link target="__blank" href="https://brainheartworld.org/" className="text-primary hover:underline">
+                Brain, Heart, World: A 3-part Documentary Series
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank" href="https://www.nakedtruth.training/" className="text-primary hover:underline">
+                Naked Truth training
               </Link>
             </li>
           </ul>
@@ -33,13 +38,54 @@ export function HelpfulLinks() {
         <CardContent>
         <ul className="space-y-2">
             <li>
-              <Link href="#" className="text-primary hover:underline">
-                Link 1
+              <Link target="__blank" href="https://www.projectexodus.net/" className="text-primary hover:underline">
+                Project Exodus
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-primary hover:underline">
-                Link 2
+              <Link target="__blank"href="https://www.sa.org/" className="text-primary hover:underline">
+                Sexaholics Anonymous
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank"href="https://fightthenewdrug.org/" className="text-primary hover:underline">
+                Fight the New Drug
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank"href="https://www.joinfortify.com/" className="text-primary hover:underline">
+                Fortify Accountability App
+              </Link>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>For Parents</CardTitle>
+          <CardDescription>Educate yourself on the damaging effects of pornography on children and teens.</CardDescription>
+        </CardHeader>
+        <CardContent>
+        <ul className="space-y-2">
+            <li>
+              <Link target="__blank" href="https://brainheartworld.org/" className="text-primary hover:underline">
+                Brain, Heart, World: A 3-part Documentary Series
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank"href="https://www.qustodio.com/" className="text-primary hover:underline">
+                Qustodio: Parental Control Software
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank"href="https://www.bark.us/" className="text-primary hover:underline">
+                Bark: Parental Control Software
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank"href="https://www.thedigitallawco.com/publications/" className="text-primary hover:underline">
+                Safety Online Books
               </Link>
             </li>
           </ul>

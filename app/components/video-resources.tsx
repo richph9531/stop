@@ -5,7 +5,7 @@ export function VideoResources() {
     <div className="space-y-8">
       <section>
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold">Porn's impact</h2>
+          <h2 className="text-2xl font-bold">Porn's Impact</h2>
           <YouTubeVideoGrid
             videos={[
               { id: "xFntLrlmSHM", title: "Understanding the problem" },
@@ -21,14 +21,14 @@ export function VideoResources() {
 
       <section>
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold">Not just a man's problem</h2>
+          <h2 className="text-2xl font-bold">Not Just a Man's Problem</h2>
           <YouTubeVideoGrid
             videos={[
               { id: "yG7cuhkw4Qk", title: "Rachel: My 13 year Experience" },
               { id: "tCrKrIEhVmM", title: "Jessica: I was a porn addict" },
               { id: "86I_DCKRbCI", title: "Ash: Online porn nearly led to a risky in-person encounter" },
               { id: "CWGwaB39Tvg", title: "Tatiana: Porn was my main education for sex and love" },
-              { id: "zQuCVeSYBIo", title: "Emmo: Overcoming pornography, shame, and self-worth" },  
+              { id: "zQuCVeSYBIo", title: "Emma: Overcoming pornography, shame, and self-worth" },  
           ]}
           />
         </div>
