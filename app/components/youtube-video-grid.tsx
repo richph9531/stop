@@ -24,7 +24,7 @@ export function YouTubeVideoGrid({ videos }: YouTubeVideoGridProps) {
         {displayedVideos.map((video) => (
           <Card key={video.id} className="bg-white/90 shadow-sm hover:bg-slate-50 transition-colors">
             <CardContent className="p-4 pt-4">
-              <YouTubeEmbed videoid={video.id} height={200} params="controls=0" />
+              <YouTubeEmbed videoid={video.id} height={200} />
             </CardContent>
             <CardHeader>
               <CardTitle className="text-sm font-medium line-clamp-2">{video.title}</CardTitle>
