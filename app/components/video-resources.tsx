@@ -38,7 +38,7 @@ export function VideoResources() {
         <h2 className="text-2xl font-bold mb-4">Testimonies of Recovery</h2>
         <YouTubeVideoGrid
           videos={[
-            { id: "4ZtcbYGUwf8", title: "I Feel Human Again" },
+            { id: "4ZtcbYGUwf8", title: "Dan: I Feel Human Again" },
             { id: "xmqDsVAHpUc", title: "Robert: Finding the Light" },
             { id: "NY-zWVrqf38", title: "Paul: My Journey to Recovery" },
             { id: "fJjsbgk6e0A", title: "Terry Crews: Diary of a CEO" },
