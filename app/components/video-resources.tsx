@@ -10,10 +10,13 @@ export function VideoResources() {
             videos={[
               { id: "xFntLrlmSHM", title: "Understanding the problem" },
               { id: "DBTb71UzPmY", title: "Let's talk about porn" },
+              { id: "bEIt4wEh7zM", title: "Link between porn and human trafficking" },
               { id: "vIgWMzdgweI", title: "Pornography isn't your problem" },
               { id: "aJLRTL7w5qA", title: "Things you didn't know about porn" },
               { id: "wSF82AwSDiU", title: "The great porn experiment" },
               { id: "QGh3wcUneT8", title: "Watchmen on the wall interview" },
+              { id: "MmKN4nkSGmk", title: "Clive speaks to Addict to Disciple" },
+              { id: "6REtkBnAhwc", title: "Porndemic book launch" },
             ]}
           />
         </div>

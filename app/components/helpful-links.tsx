@@ -18,7 +18,7 @@ export function HelpfulLinks() {
             </li>
             <li>
               <Link target="__blank" href="https://brainheartworld.org/" className="text-primary hover:underline">
-                Brain, Heart, World: A 3-part Documentary Series
+                Brain, Heart, World - A Docu-series
               </Link>
             </li>
             <li>
@@ -28,7 +28,12 @@ export function HelpfulLinks() {
             </li>
             <li>
               <Link target="__blank" href="https://campusministryunited.com/Documents/Porn_Again_Christian.pdf" className="text-primary hover:underline">
-                Porn Again Christian: A Frank Discussion
+                Porn Again Christian - A Frank Discussion
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank" href="https://www.youtube.com/@SoftWhiteUnderbelly" className="text-primary hover:underline">
+                Soft White Underbelly - The Human Condition
               </Link>
             </li>
           </ul>
@@ -42,6 +47,11 @@ export function HelpfulLinks() {
         </CardHeader>
         <CardContent>
         <ul className="space-y-2">
+            <li>
+              <Link target="__blank" href="https://www.childlinesa.org.za/teens/for-teens/issues-affecting-you/pornography-child-pornography/" className="text-primary hover:underline">
+                Childline
+              </Link>
+            </li>
             <li>
               <Link target="__blank" href="https://www.projectexodus.net/" className="text-primary hover:underline">
                 Project Exodus
@@ -62,6 +72,11 @@ export function HelpfulLinks() {
                 Fortify Accountability App
               </Link>
             </li>
+            <li>
+              <Link target="__blank"href="https://froma2d.org/" className="text-primary hover:underline">
+                From Addict to Disciple
+              </Link>
+            </li>
           </ul>
         </CardContent>
       </Card>
@@ -75,22 +90,32 @@ export function HelpfulLinks() {
         <ul className="space-y-2">
             <li>
               <Link target="__blank" href="https://brainheartworld.org/" className="text-primary hover:underline">
-                Brain, Heart, World: A 3-part Documentary Series
+                Brain, Heart, World - A Docu-series
               </Link>
             </li>
             <li>
               <Link target="__blank"href="https://www.qustodio.com/" className="text-primary hover:underline">
-                Qustodio: Parental Control Software
+                Qustodio - Parental Control Software
               </Link>
             </li>
             <li>
               <Link target="__blank"href="https://www.bark.us/" className="text-primary hover:underline">
-                Bark: Parental Control Software
+                Bark - Parental Control Software
               </Link>
             </li>
             <li>
               <Link target="__blank"href="https://www.thedigitallawco.com/publications/" className="text-primary hover:underline">
                 Safety Online Books
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank"href="https://raisingchildren.net.au/pre-teens/entertainment-technology/pornography-sexting/pornography-talking-with-children-9-11" className="text-primary hover:underline">
+                Talking with Children Aged 9-11 Years
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank"href="https://parentinghub.co.za/advice-column/health/how-to-teach-children-about-appropriate-sexual-behaviour/" className="text-primary hover:underline">
+                Teaching Children Appropriate Behaviour
               </Link>
             </li>
           </ul>
@@ -104,9 +129,9 @@ export function HelpfulLinks() {
         </CardHeader>
         <CardContent>
         <ul className="space-y-2">
-            <li>
-              <Link href="#" className="text-primary hover:underline">
-                Link 1
+        <li>
+              <Link target="__blank" href="https://www.projectexodus.net/" className="text-primary hover:underline">
+                Project Exodus
               </Link>
             </li>
             <li>
