@@ -35,7 +35,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="flex items-center gap-2 md:gap-4">
                 <FloatingMenu />
                 <Link href="/" className="header-link py-4">
-                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">S.T.O.P. - Standing Together to Oppose Pornography</h1>
+                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
+                    <span className="text-red-500">S</span>tanding 
+                    {" "}<span className="text-red-500">T</span>ogether to
+                    {" "}<span className="text-red-500">O</span>ppose 
+                    {" "}<span className="text-red-500">P</span>ornography
+                  </h1>
                 </Link>
               </div>
             </div>
