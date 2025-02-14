@@ -55,6 +55,7 @@ export function VideoResources() {
         <YouTubeVideoGrid
           videos={[
             { id: "NZKaTL_yDHc", title: "My Partner's Compassion Helped Me Quit Porn for Good" },
+            { id: "gri7TMNtig", title: "Alex and Candice - Our Experience with Betrayal Trauma" },
             { id: "Hovh1AdzP5o", title: "How Opening Up Can Help You Quit Porn" },
             { id: "7JQD7BFvsRc", title: "Breaking The Shame Cycle" },
             { id: "H6ElrtEykK4", title: "How porn almost ruined our marriage" },

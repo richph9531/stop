@@ -36,6 +36,11 @@ export function HelpfulLinks() {
                 Soft White Underbelly - The Human Condition
               </Link>
             </li>
+            <li>
+              <Link target="__blank" href="https://fightthenewdrug.org/blog/" className="text-primary hover:underline">
+                Fight the New Drug - Blog Articles
+              </Link>
+            </li>
           </ul>
         </CardContent>
       </Card>
@@ -135,8 +140,13 @@ export function HelpfulLinks() {
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-primary hover:underline">
-                Link 2
+              <Link target="__blank" href="https://www.healthline.com/health/mental-health/betrayal-trauma" className="text-primary hover:underline">
+                Understanding Betrayal Trauma
+              </Link>
+            </li>
+            <li>
+              <Link target="__blank" href="https://fightthenewdrug.org/a-female-perspective-the-emotional-betrayal-of-porn/" className="text-primary hover:underline">
+              The Science of Betrayal
               </Link>
             </li>
           </ul>

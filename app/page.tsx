@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import Link from "next/link"
 import heroImage from '@/public/hero-image.jpg'
 
 export default function HomePage() {
@@ -34,9 +33,12 @@ export default function HomePage() {
               Our community offers:
             </p>
             <ul className="list-disc pl-5 space-y-2 mt-2">
-              <li>Educational resources and information</li>
-              <li>Curated helpful links and resources</li>
+              <li>A connection point for those struggling with porn consumption</li>
+              <li>Curated educational resources and information</li>
               <li>Video content for recovery and education</li>
+              <li>A safe space for those who have been affected by pornography</li>
+              <li>A community of support and understanding</li>
+              <li>A place to find help and hope</li>
             </ul>
           </CardContent>
         </Card>
