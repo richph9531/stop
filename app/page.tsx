@@ -41,7 +41,7 @@ export default function MentalHealthWebsite() {
                 <div className="relative w-full h-[200px] mb-6">
                   <Image
                     src={heroImage}
-                    alt="People supporting each other"
+                    alt="Break the cycle"
                     fill
                     className="object-cover rounded-t-lg"
                     priority
@@ -54,7 +54,10 @@ export default function MentalHealthWebsite() {
               </CardHeader>
               <CardContent>
                 <p className="mb-4">
-                  We are dedicated to providing support, resources, and information to help individuals break free from pornography addiction and build healthier lives.
+                S.T.O.P. is a non-profit group of volunteers formed in response to the proliferation and harm of pornography in our society. We are dedicated to providing support, resources, and information to help individuals break free from pornography addiction and build healthier lives.
+                </p>
+                <p className="mb-4 text-muted-foreground italic">
+                  Our mission is to promote a society in which children are nurtured in an environment of sound family values and in which women and children in particular are protected from sexual crime, sexual exploitation, abuse and violence in accordance with their constitutional rights.
                 </p>
                 <p>
                   Our community offers:
