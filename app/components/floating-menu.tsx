@@ -27,9 +27,9 @@ export function FloatingMenu() {
         <Button 
           variant="ghost" 
           size="icon" 
-          className="h-16 w-16 hover:bg-primary-foreground/10"
+          className="h-16 w-16 hover:bg-primary-foreground/10 [&:hover>svg]:text-primary-foreground"
         >
-          <Menu className="h-12 w-12 stroke-[3]" />
+          <Menu className="h-12 w-12 stroke-[3] text-primary-foreground" />
           <span className="sr-only">Open menu</span>
         </Button>
       </SheetTrigger>

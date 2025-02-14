@@ -6,7 +6,7 @@ import heroImage from '@/public/hero-image.jpg'
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex-grow container mx-auto px-4">
         <Card className="content-card">
           <CardHeader>
             <div className="relative w-full h-[200px] mb-6">
