@@ -30,7 +30,7 @@ export function VideoResources() {
             videos={[
               { id: "yG7cuhkw4Qk", title: "Rachel: My 13 year Experience" },
               { id: "tCrKrIEhVmM", title: "Jessica: I was a porn addict" },
-              { id: "86I_DCKRbCI", title: "Ash: Online porn nearly led to a risky in-person encounter" },
+              { id: "86I_DCKRbCI", title: "Ash: Online porn nearly led to a risky encounter" },
               { id: "CWGwaB39Tvg", title: "Tatiana: Porn was my main education for sex and love" },
               { id: "zQuCVeSYBIo", title: "Emma: Overcoming pornography, shame, and self-worth" },  
           ]}
@@ -57,7 +57,7 @@ export function VideoResources() {
         <YouTubeVideoGrid
           videos={[
             { id: "NZKaTL_yDHc", title: "My Partner's Compassion Helped Me Quit Porn for Good" },
-            { id: "gri7TMNtig", title: "Alex and Candice - Our Experience with Betrayal Trauma" },
+            { id: "_gri7TMNtig", title: "Alex and Candice - Our Experience with Betrayal Trauma" },
             { id: "Hovh1AdzP5o", title: "How Opening Up Can Help You Quit Porn" },
             { id: "7JQD7BFvsRc", title: "Breaking The Shame Cycle" },
             { id: "H6ElrtEykK4", title: "How porn almost ruined our marriage" },

@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function ContactPage() {
   return (
-    <Card className="content-card">
+    <Card className="content-card bg-gray-300">
       <CardHeader>
         <CardTitle>Contact Us</CardTitle>
         <CardDescription>Get in touch with our team</CardDescription>

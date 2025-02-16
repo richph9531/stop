@@ -4,7 +4,7 @@ import Link from "next/link"
 export function HelpfulLinks() {
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <Card>
+      <Card className="bg-gray-300 shadow-sm transition-colors">
         <CardHeader>
           <CardTitle>Understanding Addiction</CardTitle>
           <CardDescription>Learn about the disease of addiction; its causes, and how it affects the brain and body.</CardDescription>
@@ -49,7 +49,7 @@ export function HelpfulLinks() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="bg-gray-300 shadow-sm hover:bg-gray-200 transition-colors">
         <CardHeader>
           <CardTitle>Getting Help</CardTitle>
           <CardDescription>Your path to recovery starts here: Explore treatment options, find support groups, and access crisis resources.</CardDescription>
@@ -90,7 +90,7 @@ export function HelpfulLinks() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="bg-gray-300 shadow-sm hover:bg-gray-200 transition-colors">
         <CardHeader>
           <CardTitle>For Parents</CardTitle>
           <CardDescription>Educate yourself on the damaging effects of pornography on children and teens.</CardDescription>
@@ -131,7 +131,7 @@ export function HelpfulLinks() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="bg-gray-300 shadow-sm hover:bg-gray-200 transition-colors">
         <CardHeader>
           <CardTitle>For Families & Friends</CardTitle>
           <CardDescription>Supporting a loved one through addiction: Learn how to help without enabling, set boundaries, and cope with the challenges.</CardDescription>
