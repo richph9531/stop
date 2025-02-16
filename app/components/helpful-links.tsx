@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import links from "./links.json"
+import links from "../data/links.json"
 
 interface Link {
   title: string;
@@ -13,7 +13,7 @@ interface LinksData {
 
 export function HelpfulLinks() {
   const typedLinks = links as LinksData;
-  
+
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {Object.entries(typedLinks).map(([categoryName, category]) => (

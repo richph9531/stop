@@ -1,5 +1,5 @@
 import { YouTubeVideoGrid } from "./youtube-video-grid"
-import videos from './videos.json'; // Import the videos JSON
+import videos from '../data/videos.json';
 
 export function VideoResources() {
   return (
