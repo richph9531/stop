@@ -41,6 +41,10 @@ export function HelpfulLinks() {
                 Fight the New Drug - Blog Articles
               </Link>
             </li>
+            <li>
+              <Link target="__blank" href="https://www.covenanteyes.com/blog/ex-porn-star-tells-the-truth-about-the-porn-industry/" className="text-primary hover:underline">
+                Ex Porn Star Tells All              </Link>
+            </li>
           </ul>
         </CardContent>
       </Card>

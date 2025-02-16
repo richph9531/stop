@@ -10,6 +10,7 @@ export function VideoResources() {
             videos={[
               { id: "xFntLrlmSHM", title: "Understanding the problem" },
               { id: "DBTb71UzPmY", title: "Let's talk about porn" },
+              { id: "hzPylqS01qU", title: "Raised on porn" },
               { id: "bEIt4wEh7zM", title: "Link between porn and human trafficking" },
               { id: "vIgWMzdgweI", title: "Pornography isn't your problem" },
               { id: "aJLRTL7w5qA", title: "Things you didn't know about porn" },
@@ -42,6 +43,7 @@ export function VideoResources() {
         <YouTubeVideoGrid
           videos={[
             { id: "4ZtcbYGUwf8", title: "Dan: I Feel Human Again" },
+            { id: "dbYWKVAeu6Y", title: "Eli: Escaping Porn Addiction" },
             { id: "xmqDsVAHpUc", title: "Robert: Finding the Light" },
             { id: "NY-zWVrqf38", title: "Paul: My Journey to Recovery" },
             { id: "fJjsbgk6e0A", title: "Terry Crews: Diary of a CEO" },
@@ -73,7 +75,7 @@ export function VideoResources() {
             { id: "Hx-p9Wr6xg0", title: "Greg: Successful male porn star speaks out" },
             { id: "5fPNNsjOMno", title: "Joshua: Why I left the porn industry" },
             { id: "RwTAgom_VX8", title: "Mia Khalifa: Why I'm speaking out about the porn industry" },
-            { id: "5DPNo97OkDY", title: "Victoria: Sex trafficking survivor" },
+            { id: "F3-av5MHuQ8", title: "Chrissy: Ex porn star interview" },
           ]}
         />
       </section>
