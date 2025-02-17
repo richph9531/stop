@@ -1,0 +1,48 @@
+.contact-form {
+    margin: 1rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.input, .textarea {
+    height: 2.5rem; /* Adjust height for input */
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid var(--input-border-color, #ccc); /* Fallback color */
+    background-color: var(--background-color, #fff); /* Change back to white as default */
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.textarea {
+    min-height: 100px; /* Maintain minimum height for textarea */
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color, #000); /* Change to black as default */
+    color: var(--primary-foreground-color, #fff); /* Fallback color */
+    height: 2.5rem;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    width: auto; /* Set width to auto to prevent stretching */
+    align-self: flex-start; /* Align the button to the start of the flex container */
+}
+
+.button:hover {
+    background-color: rgba(var(--primary-color, 0, 0, 0), 0.9); /* Darker shade on hover */
+}

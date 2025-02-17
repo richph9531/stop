@@ -1,6 +1,3 @@
-import FacebookIcon from '../../data/facebook.svg';
-import WhatsAppIcon from '../../data/whatsapp.svg';
-
 export function SocialMediaLinks() {
   return (
     <div className="space-y-4">
