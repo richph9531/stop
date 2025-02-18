@@ -64,3 +64,8 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.button-disabled {
+    background-color: #95979b; /* Tailwind's gray-400 */
+    cursor: not-allowed;
+}

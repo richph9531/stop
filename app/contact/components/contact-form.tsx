@@ -108,7 +108,7 @@ export function ContactForm() {
           </div>
           <button
             type="submit"
-            className={`button ${isLoading || isSubmitted ? 'bg-gray-400 cursor-not-allowed' : ''}`}
+            className={`button ${isLoading || isSubmitted ? 'button-disabled' : ''}`}
             disabled={isLoading || isSubmitted}
           >
             {isLoading ? (
@@ -120,7 +120,7 @@ export function ContactForm() {
             )}
           </button>
           {submissionStatus && (
-            <p className={`status-message ${submissionStatus.includes('successfully') ? 'text-green-500' : 'text-red-500'} text-sm`}>
+            <p className={`status-message ${submissionStatus.includes('successfully') ? 'text-green-600' : 'text-red-500'} text-sm`}>
               {submissionStatus}
             </p>
           )}
