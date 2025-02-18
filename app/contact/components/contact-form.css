@@ -46,3 +46,7 @@
 .button:hover {
     background-color: rgba(var(--primary-color, 0, 0, 0), 0.9); /* Darker shade on hover */
 }
+
+.border-red-500 {
+    border: 2px solid red; /* Adjust the thickness and color as needed */
+}
