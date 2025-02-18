@@ -13,7 +13,7 @@ export function ContactForm() {
         event.preventDefault();
         const form = event.currentTarget;
 
-        emailjs.sendForm('service_1ov36bf', 'template_1j7zv2g', form)
+        emailjs.sendForm('service_ix2bs3t', 'template_1j7zv2g', form)
             .then(() => {
                 console.log('SUCCESS!');
             }, (error) => {
