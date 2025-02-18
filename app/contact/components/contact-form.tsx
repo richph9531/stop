@@ -15,6 +15,9 @@ export function ContactForm() {
         user_email: '',
         message: '',
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [submissionStatus, setSubmissionStatus] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         (function() {
@@ -46,11 +49,17 @@ export function ContactForm() {
         setErrors(formErrors);
 
         if (!formErrors.user_name && !formErrors.user_email && !formErrors.message) {
+            setIsLoading(true);
             emailjs.sendForm('service_ix2bs3t', 'template_1j7zv2g', event.currentTarget)
                 .then(() => {
-                    console.log('SUCCESS!');
+                    setIsSubmitted(true);
+                    setSubmissionStatus('Message sent successfully!');
                 }, (error) => {
+                    setSubmissionStatus('Failed to send message. Please try again or get in touch via WhatsApp.');
                     console.log('FAILED...', error);
+                })
+                .finally(() => {
+                    setIsLoading(false);
                 });
         }
     };
@@ -99,10 +108,22 @@ export function ContactForm() {
           </div>
           <button
             type="submit"
-            className="button"
+            className={`button ${isLoading || isSubmitted ? 'bg-gray-400 cursor-not-allowed' : ''}`}
+            disabled={isLoading || isSubmitted}
           >
-            Send Message
+            {isLoading ? (
+              <span className="spinner"></span>
+            ) : isSubmitted ? (
+              'Message Sent'
+            ) : (
+              'Send Message'
+            )}
           </button>
+          {submissionStatus && (
+            <p className={`status-message ${submissionStatus.includes('successfully') ? 'text-green-500' : 'text-red-500'} text-sm`}>
+              {submissionStatus}
+            </p>
+          )}
         </form>
       </div>
     );
