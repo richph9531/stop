@@ -1,23 +1,11 @@
-// app/contact/components/contact-form.tsx
 import './contact-form.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export function ContactForm() {
-    // State for form fields and errors
-    const [formData, setFormData] = useState({
-        user_name: '',
-        user_email: '',
-        message: '',
-    });
-    const [errors, setErrors] = useState({
-        user_name: '',
-        user_email: '',
-        message: '',
-    });
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [submissionStatus, setSubmissionStatus] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+    const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
     useEffect(() => {
         (function() {
@@ -25,43 +13,26 @@ export function ContactForm() {
         })();
     }, []);
 
-    const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = event.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const { user_name, user_email, message } = formData;
-        let formErrors = { user_name: '', user_email: '', message: '' };
+        const form = event.currentTarget;
 
-        // Validation logic
-        if (!user_name) formErrors.user_name = 'Name is required.';
-        if (!user_email) {
-            formErrors.user_email = 'Email is required.';
-        } else if (!validateEmail(user_email)) {
-            formErrors.user_email = 'Email is invalid.';
+        if (!recaptchaToken) {
+            console.log('reCAPTCHA not completed');
+            return;
         }
-        if (!message) formErrors.message = 'Message is required.';
 
-        setErrors(formErrors);
+        emailjs.sendForm('service_ix2bs3t', 'template_1j7zv2g', form)
+            .then(() => {
+                console.log('SUCCESS!');
+                recaptchaRef.current?.reset(); // Reset reCAPTCHA after successful submission
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+    };
 
-        if (!formErrors.user_name && !formErrors.user_email && !formErrors.message) {
-            setIsLoading(true);
-            emailjs.sendForm('service_ix2bs3t', 'template_1j7zv2g', event.currentTarget)
-                .then(() => {
-                    setIsSubmitted(true);
-                    setSubmissionStatus('Message sent successfully!');
-                }, (error) => {
-                    setSubmissionStatus('Failed to send message. Please try again or get in touch via WhatsApp.');
-                    console.log('FAILED...', error);
-                })
-                .finally(() => {
-                    setIsLoading(false);
-                });
-        }
+    const onRecaptchaChange = (token: string | null) => {
+        setRecaptchaToken(token);
     };
 
     return (
@@ -69,61 +40,48 @@ export function ContactForm() {
         <form className="form" onSubmit={handleSubmit}>
           <div className="grid gap-4">
             <div className="grid gap-2">
-              <label htmlFor="name" className="label">* Name</label>
+              <label htmlFor="name" className="label">Name</label>
               <input
                 id="name"
                 name="user_name"
                 type="text"
-                className={`input ${errors.user_name ? 'border-red-500' : ''}`}
-                placeholder="Your name (100 characters max)..."
-                maxLength={100}
-                value={formData.user_name}
-                onChange={handleChange}
+                className="input"
+                placeholder="Your name"
               />
             </div>
             <div className="grid gap-2">
-              <label htmlFor="email" className="label">* Email</label>
+              <label htmlFor="email" className="label">Email</label>
               <input
                 id="email"
                 name="user_email"
                 type="email"
-                className={`input ${errors.user_email ? 'border-red-500' : ''}`}
+                className="input"
                 placeholder="your@email.com"
-                value={formData.user_email}
-                onChange={handleChange}
               />
             </div>
             <div className="grid gap-2">
-              <label htmlFor="message" className="label">* Message</label>
+              <label htmlFor="message" className="label">Message</label>
               <textarea
                 id="message"
                 name="message"
-                className={`textarea ${errors.message ? 'border-red-500' : ''}`}
-                placeholder="Your message (500 characters max)..."
-                maxLength={500}
-                value={formData.message}
-                onChange={handleChange}
+                className="textarea"
+                placeholder="Your message..."
               />
             </div>
           </div>
+          <ReCAPTCHA
+            sitekey="6Lff69sqAAAAAFzqfwGq3daly9zg9yJDf0tjolB5" // Replace with your reCAPTCHA site key
+            onChange={onRecaptchaChange}
+            ref={recaptchaRef}
+          />
           <button
             type="submit"
-            className={`button ${isLoading || isSubmitted ? 'button-disabled' : ''}`}
-            disabled={isLoading || isSubmitted}
+            className="button"
+            disabled={!recaptchaToken}
+            style={{ opacity: !recaptchaToken ? 0.6 : 1 }}
           >
-            {isLoading ? (
-              <span className="spinner"></span>
-            ) : isSubmitted ? (
-              'Message Sent'
-            ) : (
-              'Send Message'
-            )}
+            Send Message
           </button>
-          {submissionStatus && (
-            <p className={`status-message ${submissionStatus.includes('successfully') ? 'text-green-600' : 'text-red-500'} text-sm`}>
-              {submissionStatus}
-            </p>
-          )}
         </form>
       </div>
     );
