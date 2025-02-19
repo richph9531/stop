@@ -33,15 +33,19 @@ export default function HomePage() {
               Our community offers:
             </p>
             <ul className="list-disc pl-5 space-y-2 mt-2">
-              <li>A connection point for those struggling with porn consumption</li>
-              <li>Curated educational resources and information</li>
-              <li>Video content for recovery and education</li>
-              <li>A safe space for those who have been affected by pornography</li>
-              <li>A community of support and understanding</li>
-              <li>A place to find help and hope</li>
+              <li>Curated educational resources</li>
+              <li>Support for those struggling with pornography</li>
+              <li>A safe community for affected individuals</li>
+              <li>Help and hope for healing</li>
             </ul>
           </CardContent>
         </Card>
+        <div className="mt-4 p-2 bg-gray-200 rounded-md text-sm">
+          <h2 className="text-md font-semibold">Disclaimer</h2>
+          <p className="mt-1">
+            The materials provided by S.T.O.P. may not represent the views of the organization. We encourage individuals to assess each podcast, video, or article on its own merit and to use discretion in determining what aligns with their belief systems.
+          </p>
+        </div>
       </main>
     </div>
   )
