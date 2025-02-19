@@ -5,6 +5,8 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 export function ContactForm() {
     const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+    const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
+    const [isError, setIsError] = useState<boolean>(false);
     const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
     useEffect(() => {
@@ -25,9 +27,13 @@ export function ContactForm() {
         emailjs.sendForm('service_ix2bs3t', 'template_1j7zv2g', form)
             .then(() => {
                 console.log('SUCCESS!');
-                recaptchaRef.current?.reset(); // Reset reCAPTCHA after successful submission
+                setSubmissionMessage('Message sent successfully!');
+                setIsError(false);
+                recaptchaRef.current?.reset();
             }, (error) => {
                 console.log('FAILED...', error);
+                setSubmissionMessage('Failed to send message. Please try again. Alternatively, get in touch via Whatsapp.');
+                setIsError(true);
             });
     };
 
@@ -94,6 +100,11 @@ export function ContactForm() {
             Send Message
           </button>
         </form>
+        {submissionMessage && (
+          <p className={`mt-2 ${isError ? 'text-red-500' : 'text-green-600'} text-sm`}>
+            {submissionMessage}
+          </p>
+        )}
       </div>
     );
 }
