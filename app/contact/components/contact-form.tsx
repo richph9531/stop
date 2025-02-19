@@ -65,6 +65,7 @@ export function ContactForm() {
                 placeholder="Your name"
                 required
                 maxLength={100}
+                disabled={isSubmitted}
               />
             </div>
             <div className="grid gap-2">
@@ -78,6 +79,7 @@ export function ContactForm() {
                 className="input"
                 placeholder="your@email.com"
                 required
+                disabled={isSubmitted}
               />
             </div>
             <div className="grid gap-2">
@@ -91,6 +93,7 @@ export function ContactForm() {
                 placeholder="Your message (500 characters max)..."
                 required
                 maxLength={500}
+                disabled={isSubmitted}
               />
             </div>
           </div>
