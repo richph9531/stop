@@ -40,32 +40,43 @@ export function ContactForm() {
         <form className="form" onSubmit={handleSubmit}>
           <div className="grid gap-4">
             <div className="grid gap-2">
-              <label htmlFor="name" className="label">Name</label>
+              <label htmlFor="name" className="label">
+                <span className="text-red-500">*</span> Name
+              </label>
               <input
                 id="name"
                 name="user_name"
                 type="text"
                 className="input"
                 placeholder="Your name"
+                required
+                maxLength={100}
               />
             </div>
             <div className="grid gap-2">
-              <label htmlFor="email" className="label">Email</label>
+              <label htmlFor="email" className="label">
+                <span className="text-red-500">*</span> Email
+              </label>
               <input
                 id="email"
                 name="user_email"
                 type="email"
                 className="input"
                 placeholder="your@email.com"
+                required
               />
             </div>
             <div className="grid gap-2">
-              <label htmlFor="message" className="label">Message</label>
+              <label htmlFor="message" className="label">
+                <span className="text-red-500">*</span> Message
+              </label>
               <textarea
                 id="message"
                 name="message"
                 className="textarea"
-                placeholder="Your message..."
+                placeholder="Your message (500 characters max)..."
+                required
+                maxLength={500}
               />
             </div>
           </div>
