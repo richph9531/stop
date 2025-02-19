@@ -8,6 +8,7 @@ export function ContactForm() {
     const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
     const [isError, setIsError] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
     const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
     useEffect(() => {
@@ -33,6 +34,7 @@ export function ContactForm() {
                 setSubmissionMessage('Message sent successfully!');
                 setIsError(false);
                 recaptchaRef.current?.reset();
+                setIsSubmitted(true);
             }, (error) => {
                 console.log('FAILED...', error);
                 setSubmissionMessage('Failed to send message. Please try again. Alternatively, get in touch via Whatsapp.');
@@ -100,11 +102,13 @@ export function ContactForm() {
           <button
             type="submit"
             className="button"
-            disabled={!recaptchaToken || isLoading}
-            style={{ opacity: (!recaptchaToken || isLoading) ? 0.6 : 1 }}
+            disabled={!recaptchaToken || isLoading || isSubmitted}
+            style={{ opacity: (!recaptchaToken || isLoading || isSubmitted) ? 0.6 : 1 }}
           >
             {isLoading ? (
               <span className="spinner"></span>
+            ) : isSubmitted ? (
+              'Message Sent'
             ) : (
               'Send Message'
             )}
