@@ -7,6 +7,7 @@ export function ContactForm() {
     const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
     const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
     const [isError, setIsError] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
     useEffect(() => {
@@ -24,6 +25,8 @@ export function ContactForm() {
             return;
         }
 
+        setIsLoading(true);
+
         emailjs.sendForm('service_ix2bs3t', 'template_1j7zv2g', form)
             .then(() => {
                 console.log('SUCCESS!');
@@ -34,6 +37,9 @@ export function ContactForm() {
                 console.log('FAILED...', error);
                 setSubmissionMessage('Failed to send message. Please try again. Alternatively, get in touch via Whatsapp.');
                 setIsError(true);
+            })
+            .finally(() => {
+                setIsLoading(false);
             });
     };
 
@@ -94,10 +100,14 @@ export function ContactForm() {
           <button
             type="submit"
             className="button"
-            disabled={!recaptchaToken}
-            style={{ opacity: !recaptchaToken ? 0.6 : 1 }}
+            disabled={!recaptchaToken || isLoading}
+            style={{ opacity: (!recaptchaToken || isLoading) ? 0.6 : 1 }}
           >
-            Send Message
+            {isLoading ? (
+              <span className="spinner"></span>
+            ) : (
+              'Send Message'
+            )}
           </button>
         </form>
         {submissionMessage && (

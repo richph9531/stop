@@ -53,19 +53,14 @@
 
 .spinner {
     border: 2px solid transparent;
-    border-top: 2px solid #fff; /* Change color as needed */
+    border-top: 2px solid #8d8d8d; /* Change color as needed */
     border-radius: 50%;
-    width: 1em;
-    height: 1em;
-    animation: spin 0.6s linear infinite;
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.button-disabled {
-    background-color: #95979b; /* Tailwind's gray-400 */
-    cursor: not-allowed;
 }
