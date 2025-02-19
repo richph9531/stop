@@ -43,22 +43,8 @@ npm run dev
 
 # Contact Form
 
-The contact form allows users to submit their name, email, and message, which are then sent to stop.now.2025@gmail.com using EmailJS.
+The contact form allows users to submit their name, email, and a message. This information is sent to stop.now.2025@gmail.com using EmailJS. Spam is filtered through a Google reCAPTCHA (v2). There is validation on all input fields to ensure that the form is filled out correctly.
 
-## How It Works
+On the EmailJS side, a service ID is set up and linked to the stop.now.2025 email address. A template is also set up to send through the fields in the form. The template is set up for the Google reCAPTCHA v2.
 
-1. **User Input**: Users fill out the form with their name, email, and message.
-2. **Form Submission**: Upon clicking the "Send Message" button, the form data is captured and sent to stop.now.2025@gmail.com using EmailJS.
-3. **Email Delivery**: EmailJS processes the request and sends the email to the predefined recipient address set in the EmailJS template.
-
-### Requirements
-
-- An EmailJS account to configure the email service and template.
-
-### Setup
-
-- Ensure you have the EmailJS SDK installed and configured with your public key, service ID, and template ID in the code.
-
-## Usage
-
-- Simply fill out the form and submit to send your message.
+There is a forwarding rule set up within the stop.now.2025 email address to send all emails to the stop@unix.co.za account.
