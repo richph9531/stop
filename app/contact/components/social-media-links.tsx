@@ -1,11 +1,12 @@
-import contactDetails from '../../data/contact-details.json'; // Import the contact details
+const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '';
+const facebook = process.env.NEXT_PUBLIC_FACEBOOK || '';
 
 export function SocialMediaLinks() {
   return (
     <div className="space-y-4">
       <div className="flex flex-col space-y-4">
         <a
-          href={contactDetails.facebook} // Use the Facebook link from the JSON
+          href={facebook}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800"
@@ -16,7 +17,7 @@ export function SocialMediaLinks() {
           <span>Facebook</span>
         </a>
         <a
-          href={`https://wa.me/${contactDetails.whatsapp}`} // Use the WhatsApp number from the JSON
+          href={whatsapp}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-green-600 hover:text-green-800"

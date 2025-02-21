@@ -3,6 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+const serviceKey = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_KEY || '';
+const templateKey = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY || '';
+const apiKey = process.env.NEXT_PUBLIC_EMAILJS_API_KEY || '';
+const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
+
 export function ContactForm() {
     const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
     const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
@@ -13,7 +18,7 @@ export function ContactForm() {
     const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
     useEffect(() => {
-        emailjs.init("8RYJjJMEUxC3B2sMC");
+        emailjs.init(apiKey);
         setHasMounted(true);
     }, []);
 
@@ -28,7 +33,7 @@ export function ContactForm() {
 
         setIsLoading(true);
 
-        emailjs.sendForm('service_ix2bs3t', 'template_1j7zv2g', form)
+        emailjs.sendForm(serviceKey, templateKey, form)
             .then(() => {
                 console.log('SUCCESS!');
                 setSubmissionMessage('Message sent successfully!');
@@ -99,7 +104,7 @@ export function ContactForm() {
               </div>
             </div>
             <ReCAPTCHA
-              sitekey="6Lff69sqAAAAAFzqfwGq3daly9zg9yJDf0tjolB5" // Replace with your reCAPTCHA site key
+              sitekey={siteKey}
               onChange={onRecaptchaChange}
               ref={recaptchaRef}
             />
