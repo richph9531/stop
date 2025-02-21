@@ -1,9 +1,11 @@
+import contactDetails from '../../data/contact-details.json'; // Import the contact details
+
 export function SocialMediaLinks() {
   return (
     <div className="space-y-4">
       <div className="flex flex-col space-y-4">
         <a
-          href="https://www.facebook.com/groups/294768610534132"
+          href={contactDetails.facebook} // Use the Facebook link from the JSON
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800"
@@ -14,7 +16,7 @@ export function SocialMediaLinks() {
           <span>Facebook</span>
         </a>
         <a
-          href="https://wa.me/27834634762"
+          href={`https://wa.me/${contactDetails.whatsapp}`} // Use the WhatsApp number from the JSON
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-green-600 hover:text-green-800"

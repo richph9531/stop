@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaFacebook, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { FloatingMenu } from "./floating-menu";
+import contactDetails from "../data/contact-details.json"; // Adjust the path as necessary
 
 export function Header() {
   return (
@@ -27,13 +28,13 @@ export function Header() {
             <Link href="/contact" className="text-primary-foreground">Contact Us</Link>
           </div>
           <div className="flex gap-4">
-            <Link href="https://www.facebook.com/groups/294768610534132" target="_blank" className="text-primary-foreground hidden md:flex">
+            <Link href={contactDetails.facebook} target="_blank" className="text-primary-foreground hidden md:flex">
               <FaFacebook size={24} />
             </Link>
-            <Link href="https://wa.me/27834634762" target="_blank" className="text-primary-foreground hidden md:flex">
+            <Link href={`https://wa.me/${contactDetails.whatsapp}`} target="_blank" className="text-primary-foreground hidden md:flex">
               <FaWhatsapp size={24} />
             </Link>
-            <Link href="mailto:stop@unix.co.za" className="text-primary-foreground hidden md:flex">
+            <Link href={`mailto:${contactDetails.email}`} className="text-primary-foreground hidden md:flex">
               <FaEnvelope size={24} />
             </Link>
           </div>
