@@ -3,7 +3,7 @@ import videos from '../data/videos.json';
 
 export function VideoResources() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pb-12">
       {Object.entries(videos).map(([sectionTitle, videoList]) => (
         <section key={sectionTitle}>
           <h2 className="text-2xl font-bold mb-4">{sectionTitle}</h2>

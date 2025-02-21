@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import heroImage from '@/public/hero-image.jpg'
+import Disclaimer from "./components/Disclaimer"
 
 export default function HomePage() {
   return (
@@ -40,16 +41,8 @@ export default function HomePage() {
             </ul>
           </CardContent>
         </Card>
-        <div className="mt-4 p-2 bg-gray-200 rounded-md text-sm">
-          <h2 className="text-md font-semibold">Disclaimer</h2>
-          <p className="mt-1">
-            The materials provided by S.T.O.P. may not always represent the views of the organization.
-            We aim to provide a wide variety of resources in various formats in order to encourage education and recovery.
-            We urge individuals to assess each podcast, video, or article on its own merit and to use discretion in determining what aligns with their belief systems.
-          </p>
-        </div>
+        <Disclaimer /> {/* Use the new Disclaimer component */}
       </main>
     </div>
   )
 }
-

@@ -15,7 +15,7 @@ export function HelpfulLinks() {
   const typedLinks = links as LinksData;
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 pb-12">
       {Object.entries(typedLinks).map(([categoryName, category]) => (
         <Card key={categoryName} className="bg-gray-300 shadow-sm transition-colors">
           <CardHeader>

@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { SocialMediaLinks } from './components/social-media-links';
 import { ContactForm } from './components/contact-form';
+import { Header } from "../components/Header";
 
 export default function ContactPage() {
   return (
@@ -25,6 +26,7 @@ export default function ContactPage() {
           <ContactForm />
         </CardContent>
       </Card>
+      <div className="mb-12"></div>
     </div>
   )
 } 
