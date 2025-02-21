@@ -29,6 +29,13 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+          NEXT_PUBLIC_EMAILJS_API_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_API_KEY }}
+          NEXT_PUBLIC_EMAILJS_SERVICE_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_KEY }}
+          NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY }}
+          NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
+          NEXT_PUBLIC_FACEBOOK: ${{ secrets.NEXT_PUBLIC_FACEBOOK }}
+          NEXT_PUBLIC_EMAIL: ${{ secrets.NEXT_PUBLIC_EMAIL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
