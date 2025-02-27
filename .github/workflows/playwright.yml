@@ -29,12 +29,10 @@ jobs:
         NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
         NEXT_PUBLIC_FACEBOOK: ${{ secrets.NEXT_PUBLIC_FACEBOOK }}
         NEXT_PUBLIC_EMAIL: ${{ secrets.NEXT_PUBLIC_EMAIL }}
-    - name: Install serve
-      run: npm install -g serve
-    - name: Start local server
-      run: |
-        cd out
-        npx serve -p 3000 & npx wait-on http://localhost:3000
+    - name: Start Next.js server
+      run: npm run start & npx wait-on http://localhost:3000
+      env:
+        NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
     - name: Run Playwright tests
       run: npm run test
       env:
