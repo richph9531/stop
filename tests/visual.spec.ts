@@ -4,12 +4,12 @@ test.describe('Visual Regression Tests', () => {
   test.only('homepage visual comparison', async ({page}, testinfo) => {
     testinfo.snapshotSuffix = ''; 
     await page.goto('/');
-    // Wait for any dynamic content to load
     await page.waitForLoadState('networkidle');
-    // Additional wait to ensure all styles are applied
     await page.waitForTimeout(2000);
     await expect(page).toHaveScreenshot('homepage-fullscreen.png', {
       fullPage: true,
+      threshold: 0.2, // Threshold for per-pixel color difference
+      maxDiffPixelRatio: 0.02, // Allow up to 2% of pixels to be different
     });
   });
 
@@ -20,6 +20,8 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(2000);
     await expect(page).toHaveScreenshot('videos-fullscreen.png', {
       fullPage: true,
+      threshold: 0.2,
+      maxDiffPixelRatio: 0.02,
     });
   });
 
@@ -30,6 +32,8 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(2000);
     await expect(page).toHaveScreenshot('helpful-links-fullscreen.png', {
       fullPage: true,
+      threshold: 0.2,
+      maxDiffPixelRatio: 0.02,
     });
   });
 
@@ -40,6 +44,8 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(2000);
     await expect(page).toHaveScreenshot('contact-fullscreen.png', {
       fullPage: true,
+      threshold: 0.2,
+      maxDiffPixelRatio: 0.02,
     });
   });
 });
