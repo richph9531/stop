@@ -27,7 +27,7 @@ test.describe('Visual Regression Tests', () => {
 
   test('contact us page visual comparison', async ({ page }) => {
     await page.goto('/contact');
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(2000);
     await expect(page).toHaveScreenshot('contact-fullscreen.png', {
       fullPage: true,
     });

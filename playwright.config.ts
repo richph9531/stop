@@ -15,42 +15,32 @@ export default defineConfig({
   },
   projects: [
     {
-      name: 'chromium',
+      name: 'Desktop',
       use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-    {
-      name: 'iPhone 14',
-      use: { ...devices['iPhone 14'] },
-    },
-    {
-      name: 'iPhone 14 landscape',
-      use: { ...devices['iPhone 14'] },
-    },
-    {
-      name: 'Pixel 7',
-      use: { ...devices['Pixel 7'] },
+      name: 'Pixel 7 portrait',
+      use: { 
+        ...devices['Pixel 7'], browserName: 'chromium',
+      },
     },
     {
       name: 'Pixel 7 landscape',
       use: { 
-        ...devices['Pixel 7'],
+        ...devices['Pixel 7 landscape'], browserName: 'chromium',
       },
     },
     {
-      name: 'iPad Pro 11',
-      use: { ...devices['iPad Pro 11'] },
+      name: 'Ipad pro 11 portrait',
+      use: { 
+        ...devices['iPad Pro 11 portrait'], browserName: 'chromium',
+      },
     },
     {
-      name: 'iPad Pro 11 landscape',
-      use: { ...devices['iPad Pro 11'] },
-    }
+      name: 'Ipad pro 11 landscape',
+      use: { 
+        ...devices['iPad Pro 11 landscape'], browserName: 'chromium',
+      },
+    },
   ],
 });
