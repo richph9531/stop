@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Visual Regression Tests', () => {
-  test('homepage visual comparison', async ({ page }) => {
+  test('homepage visual comparison', async ({page}, testinfo) => {
+    testinfo.snapshotSuffix = ''; 
     await page.goto('/');
     await page.waitForTimeout(1000);
     await expect(page).toHaveScreenshot('homepage-fullscreen.png', {
@@ -9,7 +10,8 @@ test.describe('Visual Regression Tests', () => {
     });
   });
 
-  test('videos page visual comparison', async ({ page }) => {
+  test('videos page visual comparison', async ({ page }, testinfo) => {
+    testinfo.snapshotSuffix = '';
     await page.goto('/video-resources');
     await page.waitForTimeout(1000);
     await expect(page).toHaveScreenshot('videos-fullscreen.png', {
@@ -17,7 +19,8 @@ test.describe('Visual Regression Tests', () => {
     });
   });
 
-  test('helpful links page visual comparison', async ({ page }) => {
+  test('helpful links page visual comparison', async ({ page }, testinfo) => {
+    testinfo.snapshotSuffix = '';
     await page.goto('/helpful-links');
     await page.waitForTimeout(1000);
     await expect(page).toHaveScreenshot('helpful-links-fullscreen.png', {
@@ -25,7 +28,8 @@ test.describe('Visual Regression Tests', () => {
     });
   });
 
-  test('contact us page visual comparison', async ({ page }) => {
+  test('contact us page visual comparison', async ({ page }, testinfo) => {
+    testinfo.snapshotSuffix = '';
     await page.goto('/contact');
     await page.waitForTimeout(2000);
     await expect(page).toHaveScreenshot('contact-fullscreen.png', {
