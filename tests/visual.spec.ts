@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Visual Regression Tests', () => {
-  test('homepage visual comparison', async ({page}, testinfo) => {
+  test.only('homepage visual comparison', async ({page}, testinfo) => {
     testinfo.snapshotSuffix = ''; 
     await page.goto('/');
     await page.waitForTimeout(1000);
