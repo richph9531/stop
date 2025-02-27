@@ -1,0 +1,71 @@
+name: Test and Deploy
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Build the app
+      run: npm run build
+      env:
+        NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+        NEXT_PUBLIC_EMAILJS_API_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_API_KEY }}
+        NEXT_PUBLIC_EMAILJS_SERVICE_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_KEY }}
+        NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY }}
+        NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
+        NEXT_PUBLIC_FACEBOOK: ${{ secrets.NEXT_PUBLIC_FACEBOOK }}
+        NEXT_PUBLIC_EMAIL: ${{ secrets.NEXT_PUBLIC_EMAIL }}
+    - name: Start local server
+      run: npm run start & npx wait-on http://localhost:3000
+    - name: Run Playwright tests
+      run: npm run test
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+    - name: Upload build output
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-output
+        path: out/
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download build output
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output
+          path: out
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"

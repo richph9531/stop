@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Siteworx
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
   id-token: write
 
 jobs:
@@ -28,7 +27,6 @@ jobs:
       - name: Build Next.js app
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
           NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
           NEXT_PUBLIC_EMAILJS_API_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_API_KEY }}
           NEXT_PUBLIC_EMAILJS_SERVICE_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_KEY }}
@@ -37,11 +35,11 @@ jobs:
           NEXT_PUBLIC_FACEBOOK: ${{ secrets.NEXT_PUBLIC_FACEBOOK }}
           NEXT_PUBLIC_EMAIL: ${{ secrets.NEXT_PUBLIC_EMAIL }}
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to Siteworx
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          force_orphan: true
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          server: ${{ secrets.SITEWORX_FTP_SERVER }}
+          username: ${{ secrets.SITEWORX_FTP_USERNAME }}
+          password: ${{ secrets.SITEWORX_FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: ${{ secrets.SITEWORX_SERVER_DIR }}
