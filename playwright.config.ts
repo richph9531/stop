@@ -3,7 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  // forbidOnly: !!process.env.CI,
+  forbidOnly: !!process.env.CI,
   // retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   use: {
@@ -22,37 +22,37 @@ export default defineConfig({
         viewport: { width: 1280, height: 720 },
       },
     },
-    // {
-    //   name: 'Pixel 7 portrait',
-    //   use: { 
-    //     ...devices['Pixel 7'],
-    //     browserName: 'chromium',
-    //     deviceScaleFactor: 1,
-    //   },
-    // },
-    // {
-    //   name: 'Pixel 7 landscape',
-    //   use: { 
-    //     ...devices['Pixel 7 landscape'],
-    //     browserName: 'chromium',
-    //     deviceScaleFactor: 1,
-    //   },
-    // },
-    // {
-    //   name: 'Ipad pro 11 portrait',
-    //   use: { 
-    //     ...devices['iPad Pro 11 portrait'],
-    //     browserName: 'chromium',
-    //     deviceScaleFactor: 1,
-    //   },
-    // },
-    // {
-    //   name: 'Ipad pro 11 landscape',
-    //   use: { 
-    //     ...devices['iPad Pro 11 landscape'],
-    //     browserName: 'chromium',
-    //     deviceScaleFactor: 1,
-    //   },
-    // },
+    {
+      name: 'Pixel 7 portrait',
+      use: { 
+        ...devices['Pixel 7'],
+        browserName: 'chromium',
+        deviceScaleFactor: 1,
+      },
+    },
+    {
+      name: 'Pixel 7 landscape',
+      use: { 
+        ...devices['Pixel 7 landscape'],
+        browserName: 'chromium',
+        deviceScaleFactor: 1,
+      },
+    },
+    {
+      name: 'Ipad pro 11 portrait',
+      use: { 
+        ...devices['iPad Pro 11 portrait'],
+        browserName: 'chromium',
+        deviceScaleFactor: 1,
+      },
+    },
+    {
+      name: 'Ipad pro 11 landscape',
+      use: { 
+        ...devices['iPad Pro 11 landscape'],
+        browserName: 'chromium',
+        deviceScaleFactor: 1,
+      },
+    },
   ],
 });
