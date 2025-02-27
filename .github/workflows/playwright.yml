@@ -18,8 +18,13 @@ jobs:
       run: npm ci
     - name: Install Playwright Chromium
       run: npx playwright install chromium
-    - name: Start dev server
-      run: npm run dev & npx wait-on http://localhost:3000
+    - name: Start dev server and wait for compilation
+      run: |
+        npm run dev &
+        # Wait for initial compilation
+        npx wait-on -t 30000 tcp:3000
+        # Additional wait to ensure full compilation
+        sleep 10
       env:
         NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
