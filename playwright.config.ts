@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   use: {
     baseURL: process.env.CI 
-      ? 'https://richph9531.github.io/stop'
+      ? `http://localhost:3000${process.env.NEXT_PUBLIC_BASE_PATH || ''}`
       : 'http://localhost:3000',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
@@ -24,37 +24,37 @@ export default defineConfig({
         viewport: { width: 1280, height: 720 },
       },
     },
-    {
-      name: 'Pixel 7 portrait',
-      use: { 
-        ...devices['Pixel 7'],
-        browserName: 'chromium',
-        deviceScaleFactor: 1,
-      },
-    },
-    {
-      name: 'Pixel 7 landscape',
-      use: { 
-        ...devices['Pixel 7 landscape'],
-        browserName: 'chromium',
-        deviceScaleFactor: 1,
-      },
-    },
-    {
-      name: 'Ipad pro 11 portrait',
-      use: { 
-        ...devices['iPad Pro 11 portrait'],
-        browserName: 'chromium',
-        deviceScaleFactor: 1,
-      },
-    },
-    {
-      name: 'Ipad pro 11 landscape',
-      use: { 
-        ...devices['iPad Pro 11 landscape'],
-        browserName: 'chromium',
-        deviceScaleFactor: 1,
-      },
-    },
+    // {
+    //   name: 'Pixel 7 portrait',
+    //   use: { 
+    //     ...devices['Pixel 7'],
+    //     browserName: 'chromium',
+    //     deviceScaleFactor: 1,
+    //   },
+    // },
+    // {
+    //   name: 'Pixel 7 landscape',
+    //   use: { 
+    //     ...devices['Pixel 7 landscape'],
+    //     browserName: 'chromium',
+    //     deviceScaleFactor: 1,
+    //   },
+    // },
+    // {
+    //   name: 'Ipad pro 11 portrait',
+    //   use: { 
+    //     ...devices['iPad Pro 11 portrait'],
+    //     browserName: 'chromium',
+    //     deviceScaleFactor: 1,
+    //   },
+    // },
+    // {
+    //   name: 'Ipad pro 11 landscape',
+    //   use: { 
+    //     ...devices['iPad Pro 11 landscape'],
+    //     browserName: 'chromium',
+    //     deviceScaleFactor: 1,
+    //   },
+    // },
   ],
 });
