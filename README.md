@@ -27,7 +27,7 @@ A Next.js web application dedicated to providing support, resources, and informa
 git clone [your-repo-url]
 ```
 
-2. Install all dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
