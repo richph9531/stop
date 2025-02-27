@@ -32,7 +32,9 @@ jobs:
     - name: Install serve
       run: npm install -g serve
     - name: Start local server
-      run: npx serve out -p 3000 & npx wait-on http://localhost:3000
+      run: |
+        cd out
+        npx serve -p 3000 & npx wait-on http://localhost:3000
     - name: Run Playwright tests
       run: npm run test
       env:

@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   use: {
     baseURL: process.env.CI 
-      ? `http://localhost:3000${process.env.NEXT_PUBLIC_BASE_PATH || ''}`
+      ? 'http://localhost:3000'
       : 'http://localhost:3000',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
