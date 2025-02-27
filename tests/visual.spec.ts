@@ -7,6 +7,8 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(1000);
     await expect(page).toHaveScreenshot('homepage-fullscreen.png', {
       fullPage: true,
+      // threshold: 0.2, // Allow for small differences
+      // maxDiffPixelRatio: 0.25, // Allow for some pixel ratio differences
     });
   });
 
@@ -16,6 +18,8 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(1000);
     await expect(page).toHaveScreenshot('videos-fullscreen.png', {
       fullPage: true,
+      // threshold: 0.2,
+      // maxDiffPixelRatio: 0.25,
     });
   });
 
@@ -25,6 +29,8 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(1000);
     await expect(page).toHaveScreenshot('helpful-links-fullscreen.png', {
       fullPage: true,
+      // threshold: 0.2,
+      // maxDiffPixelRatio: 0.25,
     });
   });
 
@@ -34,6 +40,8 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(2000);
     await expect(page).toHaveScreenshot('contact-fullscreen.png', {
       fullPage: true,
+      // threshold: 0.2,
+      // maxDiffPixelRatio: 0.25,
     });
   });
 });
