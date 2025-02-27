@@ -7,9 +7,7 @@ export default defineConfig({
   // retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   use: {
-    baseURL: process.env.CI 
-      ? `http://localhost:3000${process.env.NEXT_PUBLIC_BASE_PATH || ''}`
-      : 'http://localhost:3000',
+    baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     deviceScaleFactor: 1, // Force 1:1 pixel ratio
