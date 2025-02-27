@@ -41,7 +41,7 @@ export default defineConfig({
     {
       name: 'Ipad pro 11 portrait',
       use: { 
-        ...devices['iPad Pro 11 portrait'],
+        ...devices['iPad Pro 11'],
         browserName: 'chromium',
         deviceScaleFactor: 1,
       },
