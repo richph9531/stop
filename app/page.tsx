@@ -41,7 +41,7 @@ export default function HomePage() {
             </ul>
           </CardContent>
         </Card>
-        <Disclaimer /> {/* Use the new Disclaimer component */}
+        <Disclaimer />
       </main>
     </div>
   )
