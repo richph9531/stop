@@ -11,14 +11,13 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     deviceScaleFactor: 1, // Force 1:1 pixel ratio
-    viewport: { width: 1280, height: 720 }, // Set consistent viewport
+    // viewport: { width: 1280, height: 720 }, // Set consistent viewport
   },
   projects: [
     {
       name: 'Desktop',
       use: { 
         ...devices['Desktop Chrome'],
-        deviceScaleFactor: 1,
         viewport: { width: 1280, height: 720 },
       },
     },
@@ -27,7 +26,6 @@ export default defineConfig({
       use: { 
         ...devices['Pixel 7'],
         browserName: 'chromium',
-        deviceScaleFactor: 1,
       },
     },
     {
@@ -35,7 +33,6 @@ export default defineConfig({
       use: { 
         ...devices['Pixel 7 landscape'],
         browserName: 'chromium',
-        deviceScaleFactor: 1,
       },
     },
     {
@@ -43,7 +40,6 @@ export default defineConfig({
       use: { 
         ...devices['iPad Pro 11'],
         browserName: 'chromium',
-        deviceScaleFactor: 1,
       },
     },
     {
@@ -51,7 +47,6 @@ export default defineConfig({
       use: { 
         ...devices['iPad Pro 11 landscape'],
         browserName: 'chromium',
-        deviceScaleFactor: 1,
       },
     },
   ],
