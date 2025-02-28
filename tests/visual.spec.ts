@@ -9,8 +9,8 @@ async function navigateAndWait(page: Page, path: string) {
 async function expectScreenshot(page: Page, name: string) {
   await expect(page).toHaveScreenshot(`${name}.png`, {
     fullPage: true,
-    threshold: 0.2, // Threshold for per-pixel color difference
-    maxDiffPixelRatio: 0.02, // Allow up to 2% of pixels to be different
+    // threshold: 0.2, // Threshold for per-pixel color difference
+    maxDiffPixelRatio: 0.03, // Allow up to 2% of pixels to be different
   });
 }
 

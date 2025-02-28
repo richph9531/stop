@@ -11,7 +11,6 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     deviceScaleFactor: 1,
-
   },
   projects: [
     {
