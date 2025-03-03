@@ -67,6 +67,15 @@ export function FloatingMenu() {
             Video Resources
           </Link>
           <Link 
+            href="/trafficking" 
+            onClick={handleLinkClick}
+            className={`text-xl hover:text-primary transition-colors ${
+              pathname === "/trafficking" ? "text-primary font-semibold" : ""
+            }`}
+          >
+            Trafficking
+          </Link>
+          <Link 
             href="/contact" 
             onClick={handleLinkClick}
             className={`text-xl hover:text-primary transition-colors ${

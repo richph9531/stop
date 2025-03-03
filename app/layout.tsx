@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         />
       </head>
       <body>
-        <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+        <div className="flex flex-col min-h-screen relative bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
           <Header />
 
           <main className="flex-grow container mx-auto px-4 py-4 md:py-8">

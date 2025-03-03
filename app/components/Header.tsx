@@ -28,6 +28,7 @@ export function Header() {
             <Link href="/" className="text-primary-foreground">Home</Link>
             <Link href="/helpful-links" className="text-primary-foreground">Helpful Links</Link>
             <Link href="/video-resources" className="text-primary-foreground">Video Resources</Link>
+            <Link href="/trafficking" className="text-primary-foreground">Trafficking</Link>
             <Link href="/contact" className="text-primary-foreground">Contact Us</Link>
           </div>
           <div className="flex gap-4">
