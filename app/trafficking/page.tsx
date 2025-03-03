@@ -65,7 +65,7 @@ export default function TraffickingStatsPage() {
               <Users className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">99%</div>
+              <div className="text-2xl font-bold">90%+</div>
               <p className="text-xs text-muted-foreground">Of sex trafficking victims are women and girls</p>
             </CardContent>
           </Card>
@@ -390,7 +390,7 @@ export default function TraffickingStatsPage() {
           <h2 className="text-xl font-semibold mb-4">About the Data</h2>
           <p className="text-muted-foreground mb-4">
             The information presented on this page is based on research from various sources
-            and represent estimates from various international organizations including the International
+            and represents estimates from various international organizations including the International
             Labour Organization (ILO), the United Nations Office on Drugs and Crime (UNODC), and other anti-trafficking
             organizations.
           </p>
