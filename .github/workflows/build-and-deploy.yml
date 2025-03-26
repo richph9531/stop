@@ -15,7 +15,7 @@ env:
   NEXT_PUBLIC_EMAIL: ${{ secrets.NEXT_PUBLIC_EMAIL }}
 
 jobs:
-  test:
+  test-and-build:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -50,8 +50,8 @@ jobs:
         name: build-output
         path: out/
 
-  deploy:
-    needs: test
+  deploy-to-github-pages:
+    needs: test-and-build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
@@ -73,3 +73,23 @@ jobs:
           force_orphan: true
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
+
+  deploy-to-live:
+    needs: test-and-build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download build output
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: out
+      - name: Deploy to Siteworx
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.SITEWORX_FTP_SERVER }}
+          username: ${{ secrets.SITEWORX_FTP_USERNAME }}
+          password: ${{ secrets.SITEWORX_FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: ${{ secrets.SITEWORX_SERVER_DIR }}
