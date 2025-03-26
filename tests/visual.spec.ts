@@ -26,6 +26,21 @@ test.describe('Visual Regression Tests', () => {
     await expectScreenshot(page, 'videos');
   });
 
+  test('videos (expanded) page visual comparison', async ({ page }, testinfo) => {
+    testinfo.snapshotSuffix = '';
+    await navigateAndWait(page, '/video-resources');
+    await page.evaluate(() => {
+      document.querySelectorAll('button').forEach(button => {
+        if (button.textContent?.includes('Show More')) {
+          button.click();
+        }
+      });
+    });
+    await page.waitForTimeout(500);
+    await expectScreenshot(page, 'videos-expanded');
+  });
+
+
   test('helpful links', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
     await navigateAndWait(page, '/helpful-links');
