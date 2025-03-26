@@ -85,7 +85,7 @@ jobs:
         with:
           name: build-output
           path: out
-      - name: Deploy to Siteworx
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.SITEWORX_FTP_SERVER }}
