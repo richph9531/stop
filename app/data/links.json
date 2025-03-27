@@ -1,106 +1,147 @@
 {
   "Understanding Addiction": [
     {
-      "title": "Brain Studies on Porn Users & Sex Addicts",
-      "url": "https://www.yourbrainonporn.com/relevant-research-and-articles-about-the-studies/brain-studies-on-porn-users-sex-addicts/"
-    },
-    {
-      "title": "Brain, Heart, World - A Docu-series",
-      "url": "https://brainheartworld.org/"
-    },
-    {
       "title": "Fight the New Drug",
+      "description": "Education and awareness on the harmful effects of pornography - using science, facts, and personal accounts",
       "url": "https://fightthenewdrug.org/"
     },
     {
+      "title": "Brain, Heart, World",
+      "description": "A 3-part documentary series on the damages of pornography on the consumer, their relationships and the world",
+      "url": "https://brainheartworld.org/"
+    },
+    {
+      "title": "Your Brain on Porn",
+      "description": "Brain studies on pornography users & sex addicts",
+      "url": "https://www.yourbrainonporn.com/relevant-research-and-articles-about-the-studies/brain-studies-on-porn-users-sex-addicts/"
+    },
+    {
       "title": "Fight the Beast",
+      "description": "An educational organization helping individuals and communities fight against pornography and sexual addiction.",
       "url": "https://fightthebeast.org/"
     },
     {
       "title": "Naked Truth Training",
+      "description": "A hub for faith-based digital training and online courses",
       "url": "https://www.nakedtruth.training/"
     },
     {
-      "title": "Porn Again Christian - A Frank Discussion",
+      "title": "Porn Again Christian",
+      "description": "A frank discussion on pornography and masturbation",
       "url": "https://campusministryunited.com/Documents/Porn_Again_Christian.pdf"
     },
     {
-      "title": "Soft White Underbelly - The Human Condition",
+      "title": "Soft White Underbelly",
+      "description": "Interviews and portraits of the brokenness in our humanity",
       "url": "https://www.youtube.com/@SoftWhiteUnderbelly"
     },
     {
-      "title": "Ex Porn Star Tells All",
+      "title": "Covenant Eyes Blog",
+      "description": "Ex-porn star tells the truth about the porn industry",
       "url": "https://www.covenanteyes.com/blog/ex-porn-star-tells-the-truth-about-the-porn-industry/"
     }
   ],
-  "Getting Help": [
-    {
-      "title": "Childline",
-      "url": "https://www.childlinesa.org.za/teens/for-teens/issues-affecting-you/pornography-child-pornography/"
-    },
+  "Support for Porn Users": [
     {
       "title": "Project Exodus",
+      "description": "Innovative, effective and accessible strategies to address issues of addictive pornography use and substance dependence",
       "url": "https://www.projectexodus.net/"
     },
     {
       "title": "Sexaholics Anonymous",
+      "description": "A fellowship with a solution to the problems of lust, sex, and pornography addiction", 
       "url": "https://www.sa.org/"
     },
     {
-      "title": "Fortify Accountability App",
+      "title": "Fortify",
+      "description": "An accountability app designed to equip individuals struggling with compulsive pornography use", 
       "url": "https://www.joinfortify.com/"
     },
     {
       "title": "From Addict to Disciple",
+      "description": "A podcast helping those with addictions find hope and freedom",
       "url": "https://froma2d.org/"
+    },
+    {
+      "title": "Focus on the Family",
+      "description": "Three things to say (and not say) after you admit your porn addiction",
+      "url": "https://www.focusonthefamily.com/marriage/3-things-to-say-and-not-say-after-you-admit-your-porn-addiction/"
     }
   ],
-  "For Parents": [
+  "Support for Loved Ones": [
     {
-      "title": "Brain, Heart, World - A Docu-series",
-      "url": "https://brainheartworld.org/"
-    },
-    {
-      "title": "Qustodio - Parental Control Software",
-      "url": "https://www.qustodio.com/"
-    },
-    {
-      "title": "Bark - Parental Control Software",
-      "url": "https://www.bark.us/"
-    },
-    {
-      "title": "Techbear Online - Digital addiction intervention",
-      "url": "https://techbearonline.co.za/"
-    },
-    {
-      "title": "A Conversation Blueprint",
-      "url": "https://fightthenewdrug.org/lets-talk-about-porn/"
-    },
-    {
-      "title": "Safety Online Books",
-      "url": "https://www.thedigitallawco.com/publications/"
-    },
-    {
-      "title": "Talking with Children Aged 9-11 Years",
-      "url": "https://raisingchildren.net.au/pre-teens/entertainment-technology/pornography-sexting/pornography-talking-with-children-9-11"
-    },
-    {
-      "title": "Teaching Children Appropriate Behaviour",
-      "url": "https://parentinghub.co.za/advice-column/health/how-to-teach-children-about-appropriate-sexual-behaviour/"
-    }
-  ],
-  "For Families & Friends": [
-    {
-      "title": "Project Exodus",
-      "url": "https://www.projectexodus.net/"
-    },
-    {
-      "title": "Understanding Betrayal Trauma",
+      "title": "Healthline Blog",
+      "description": "Why betrayal can cause trauma and how to start healing",
       "url": "https://www.healthline.com/health/mental-health/betrayal-trauma"
     },
     {
       "title": "The Science of Betrayal",
+      "description": "The emotional trauma of having a porn-addicted partner",
       "url": "https://fightthenewdrug.org/a-female-perspective-the-emotional-betrayal-of-porn/"
+    },
+    {
+      "title": "Virtual Addiction",
+      "description": "Helping loved ones battle porn addiction: A guide for family and friends",
+      "url": "https://virtual-addiction.com/blog/helping-loved-ones-battle-porn-addiction-a-guide-for-family-and-friends/"
+    },
+    {
+      "title": "Focus on the Family",
+      "description": "Responding to your husband's pornography secret",
+      "url": "https://www.focusonthefamily.com/marriage/responding-to-your-husbands-secret-porn/"
+    }
+  ],
+  "Talking to Kids": [
+    {
+      "title": "Let's Talk About Porn",
+      "description": "An interactive blueprint for having conversations with anyone about pornography",
+      "url": "https://fightthenewdrug.org/lets-talk-about-porn/"
+    },
+    {
+      "title": "Selfies, Sexts and Smartphones",
+      "description": "A book for teenagers and parents about all of the major issues that teenagers face in the digital age",
+      "url": "https://www.thedigitallawco.com/publications/"
+    },
+    {
+      "title": "Focus on the Family",
+      "description": "How to help girls with a pornography addiction",
+      "url": "https://www.focusonthefamily.com/parenting/how-to-help-girls-with-a-cybersex-addiction/"
+    },
+    {
+      "title": "Raising Children",
+      "description": "Talking with children about pornography at 9-11 years: parenting tips",
+      "url": "https://raisingchildren.net.au/pre-teens/entertainment-technology/pornography-sexting/pornography-talking-with-children-9-11"
+    },
+    {
+      "title": "Parenting Hub",
+      "description": "How to teach children about appropriate sexual behaviour",
+      "url": "https://parentinghub.co.za/advice-column/health/how-to-teach-children-about-appropriate-sexual-behaviour/"
+    },
+    {
+      "title": "Childline",
+      "description": "Non-profit organization that works collectively to protect children from all forms of violence",
+      "url": "https://www.childlinesa.org.za/teens/for-teens/issues-affecting-you/pornography-child-pornography/"
+    }
+  ],
+  "General Safety Online": [
+    {
+      "title": "Techbear Online",
+      "description": "Digital and social media addiction intervention",
+      "url": "https://techbearonline.co.za/"
+    },
+    {
+      "title": "Qustodio",
+      "description": "All-in-one parental control and digital wellbeing solution",
+      "url": "https://www.qustodio.com/"
+    },
+    {
+      "title": "Bark",
+      "description": "Advanced content monitoring for all your kid's devices",
+      "url": "https://www.bark.us/"
+    },
+
+    { "title": "Family Tech Zone",
+      "description": "A tech blog and podcast for families",
+      "url": "https://familytechzone.com/"
     }
   ]
 }

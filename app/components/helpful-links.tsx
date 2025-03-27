@@ -1,10 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 import links from "../data/links.json"
 
 interface Link {
   title: string;
   url: string;
+  description: string;
 }
 
 interface LinksData {
@@ -22,12 +24,20 @@ export function HelpfulLinks() {
             <CardTitle>{categoryName}</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               {category.map((link) => (
                 <li key={link.title}>
-                  <Link target="_blank" href={link.url} className="text-primary hover:underline">
-                    {link.title}
-                  </Link>
+                  <div className="flex items-start">
+                    <Link 
+                      target="_blank" 
+                      href={link.url} 
+                      className="text-primary hover:underline flex items-center"
+                    >
+                      <span>{link.title}</span>
+                      <ExternalLink className="ml-1 h-3 w-3" />
+                    </Link>
+                  </div>
+                  <p className="text-gray-500 text-sm italic mt-1">{link.description}</p>
                 </li>
               ))}
             </ul>
@@ -37,4 +47,3 @@ export function HelpfulLinks() {
     </div>
   )
 }
-
