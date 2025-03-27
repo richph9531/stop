@@ -9,7 +9,6 @@ A Next.js web application dedicated to providing support, resources, and informa
 - **Styling**: Tailwind CSS
 - **UI Components**: Shadcn UI
 
-
 ## Getting Started
 
 1. Clone the repository:
@@ -55,12 +54,6 @@ Visual regression tests capture screenshots of key pages and compare them agains
   - Desktop Chrome (1280×720)
   - Pixel 7 (portrait and landscape)
   - iPad Pro 11 (portrait and landscape)
-- **Pages Tested**:
-  - Homepage
-  - Video Resources
-  - Helpful Links
-  - Contact Us
-  - Trafficking (Impact and Risk Factors)
 
 ### Running Visual Tests
 
