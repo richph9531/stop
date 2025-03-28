@@ -7,17 +7,22 @@ export default function RedirectHandler() {
   const router = useRouter();
   
   useEffect(() => {
-    // Check if there's a stored redirect path
-    const redirectPath = sessionStorage.getItem('redirectPath');
+    // Check if there's a stored redirect path in localStorage
+    const redirectPath = localStorage.getItem('redirectPath');
     
     if (redirectPath) {
       // Clear the stored path
-      sessionStorage.removeItem('redirectPath');
+      localStorage.removeItem('redirectPath');
       
       // Only redirect if we're on the homepage
       if (window.location.pathname === '/' || window.location.pathname === '') {
-        // Use Next.js router to navigate to the stored path
-        router.push(redirectPath);
+        console.log('Redirecting to:', redirectPath);
+        
+        // Use setTimeout to ensure the redirect happens after the page is fully loaded
+        setTimeout(() => {
+          // Use Next.js router to navigate to the stored path
+          router.push(redirectPath);
+        }, 100);
       }
     }
   }, [router]);
