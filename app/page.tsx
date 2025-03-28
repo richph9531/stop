@@ -2,13 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Image from "next/image"
 import heroImage from '@/public/hero-image.jpg'
 import Disclaimer from "./components/Disclaimer"
-import RedirectHandler from "./components/RedirectHandler"
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
-      <RedirectHandler />
-      
       <main className="flex-grow container mx-auto px-4">
         <Card className="bg-gray-300 shadow-sm transition-colors">
           <CardHeader>
