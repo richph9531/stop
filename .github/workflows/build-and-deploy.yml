@@ -38,29 +38,7 @@ jobs:
         path: test-results/
         retention-days: 2
 
-  build-for-github-pages:
-    needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-    - name: Install dependencies
-      run: npm ci
-    - name: Build for GitHub Pages
-      run: npm run build
-      env:
-        NODE_ENV: production
-        NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
-    - name: Upload GitHub Pages build
-      uses: actions/upload-artifact@v4
-      with:
-        name: github-pages-build
-        path: out/
-
-  build-for-live:
+  build:
     needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -81,32 +59,8 @@ jobs:
         name: live-build
         path: out/
 
-  deploy-to-github-pages:
-    needs: build-for-github-pages
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    steps:
-      - uses: actions/checkout@v3
-      - name: Download build output
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages-build
-          path: out
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          force_orphan: true
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-
-  deploy-to-live:
-    needs: build-for-live
+  deploy:
+    needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
