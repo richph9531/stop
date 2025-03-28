@@ -8,8 +8,17 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <script>
-    // Simple redirect to home page
-    window.location.href = '/';
+    // SPA routing fix for static hosting
+    (function() {
+      // Get the current path
+      const path = window.location.pathname;
+      
+      // Store the path in sessionStorage
+      sessionStorage.setItem('redirectPath', path);
+      
+      // Redirect to the home page
+      window.location.href = '/';
+    })();
   </script>
   <style>
     body {
