@@ -142,6 +142,10 @@
     { "title": "Family Tech Zone",
       "description": "A tech blog and podcast for families",
       "url": "https://familytechzone.com/"
+    },
+    { "title": "Smart Social",
+      "description": "Helping parents understand tech & social media to keep kids safe & successful",
+      "url": "https://smartsocial.com/"
     }
   ]
 }
