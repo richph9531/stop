@@ -11,8 +11,14 @@ export default function NotFound() {
     // Get the current path
     const path = window.location.pathname;
     
+    // Ensure path has a trailing slash for consistency with trailingSlash: true
+    const formattedPath = path.endsWith('/') ? path : `${path}/`;
+    
     // Store the path in localStorage (more reliable than sessionStorage)
-    localStorage.setItem('redirectPath', path);
+    localStorage.setItem('redirectPath', formattedPath);
+    
+    // Log for debugging
+    console.log('not-found.tsx - Storing path:', formattedPath);
     
     // Redirect to home after a short delay
     const timer = setTimeout(() => {

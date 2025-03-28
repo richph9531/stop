@@ -1,10 +1,11 @@
 {
+  "trailingSlash": true,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/:path*", "destination": "/" }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, proxy-revalidate" },
         { "key": "Pragma", "value": "no-cache" },

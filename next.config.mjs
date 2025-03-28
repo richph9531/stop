@@ -16,9 +16,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  basePath: '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? (process.env.NEXT_PUBLIC_BASE_PATH || '') : '',
+  // Set output to 'export' for static site generation
+  output: 'export',
+  
+  // Remove basePath and assetPrefix to avoid routing issues
+  trailingSlash: true, // Add trailing slashes to all routes
   
   experimental: {
     webpackBuildWorker: true,

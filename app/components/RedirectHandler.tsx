@@ -18,10 +18,13 @@ export default function RedirectHandler() {
       if (window.location.pathname === '/' || window.location.pathname === '') {
         console.log('Redirecting to:', redirectPath);
         
+        // Ensure path has a trailing slash for consistency with trailingSlash: true
+        const formattedPath = redirectPath.endsWith('/') ? redirectPath : `${redirectPath}/`;
+        
         // Use setTimeout to ensure the redirect happens after the page is fully loaded
         setTimeout(() => {
           // Use Next.js router to navigate to the stored path
-          router.push(redirectPath);
+          router.push(formattedPath);
         }, 100);
       }
     }
