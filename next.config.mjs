@@ -17,9 +17,9 @@ const nextConfig = {
     unoptimized: true,
   },
   output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  basePath: process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASE_PATH : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASE_PATH : '',
-
+  basePath: '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? (process.env.NEXT_PUBLIC_BASE_PATH || '') : '',
+  
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,

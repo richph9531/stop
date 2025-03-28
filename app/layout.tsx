@@ -3,6 +3,7 @@ import './globals.css'
 import { ReactNode } from "react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
+
 export const metadata: Metadata = {
   title: 'S.T.O.P.',
   description: 'Standing Together to Oppose Pornography',
@@ -26,6 +27,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           href="/favicon.ico?v=1" 
           type="image/x-icon"
         />
+        {/* Cache-busting meta tags */}
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
       </head>
       <body>
         <div className="flex flex-col min-h-screen relative bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
