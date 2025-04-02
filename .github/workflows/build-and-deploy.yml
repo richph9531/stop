@@ -73,8 +73,8 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.SITEWORX_FTP_SERVER }}
-          username: ${{ secrets.SITEWORX_FTP_USERNAME }}
-          password: ${{ secrets.SITEWORX_FTP_PASSWORD }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: ${{ secrets.SITEWORX_SERVER_DIR }}
+          server-dir: ${{ secrets.SERVER_DIR }}
