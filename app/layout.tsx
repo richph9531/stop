@@ -26,12 +26,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head>
         <link 
           rel="shortcut icon" 
-          href="/favicon.ico?v=1" 
+          href={`/favicon.ico?v=${Date.now()}`} 
           type="image/x-icon"
         />
         <link 
           rel="icon" 
-          href="/favicon.ico?v=1" 
+          href={`/favicon.ico?v=${Date.now()}`} 
           type="image/x-icon"
         />
         {/* Cache-busting meta tags */}
