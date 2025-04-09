@@ -3,6 +3,13 @@ import './globals.css'
 import { ReactNode } from "react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
+import { League_Spartan } from 'next/font/google'
+
+const leagueSpartan = League_Spartan({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-league-spartan',
+})
 
 export const metadata: Metadata = {
   title: 'S.T.O.P.',
@@ -15,7 +22,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${leagueSpartan.variable}`}>
       <head>
         <link 
           rel="shortcut icon" 
