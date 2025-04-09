@@ -37,7 +37,11 @@ test.describe('Visual Regression Tests', () => {
       });
     });
     await page.waitForTimeout(500);
-    await expectScreenshot(page, 'videos-expanded');
+    await expect(page).toHaveScreenshot('videos-expanded.png', {
+      fullPage: true,
+      ...(process.env.CI ? { maxDiffPixelRatio: 0.03 } : {}),
+      maxDiffPixels: 5,
+    });
   });
 
 
