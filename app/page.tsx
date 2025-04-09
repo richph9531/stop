@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import heroImage from '@/public/hero-image.jpg'
-import Disclaimer from "./components/Disclaimer"
 
 export default function HomePage() {
   return (
@@ -9,12 +8,13 @@ export default function HomePage() {
       <main className="flex-grow container mx-auto px-4">
         <Card className="bg-gray-300 shadow-sm transition-colors">
           <CardHeader>
-            <div className="relative w-full h-[200px] mb-6">
+            <div className="relative w-full h-[250px] mb-6">
               <Image
                 src={heroImage}
                 alt="Break the cycle"
                 fill
                 className="object-cover rounded-t-lg"
+                style={{ objectPosition: 'center 40%' }}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 quality={85}
@@ -41,7 +41,6 @@ export default function HomePage() {
             </ul>
           </CardContent>
         </Card>
-        <Disclaimer />
       </main>
     </div>
   )
