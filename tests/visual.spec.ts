@@ -22,13 +22,13 @@ test.describe('Visual Regression Tests', () => {
 
   test('videos page visual comparison', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
-    await navigateAndWait(page, '/video-resources');
+    await navigateAndWait(page, '/videos');
     await expectScreenshot(page, 'videos');
   });
 
   test('videos (expanded) page visual comparison', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
-    await navigateAndWait(page, '/video-resources');
+    await navigateAndWait(page, '/videos');
     await page.evaluate(() => {
       document.querySelectorAll('button').forEach(button => {
         if (button.textContent?.includes('Show More')) {
@@ -43,7 +43,7 @@ test.describe('Visual Regression Tests', () => {
 
   test('helpful links', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
-    await navigateAndWait(page, '/helpful-links');
+    await navigateAndWait(page, '/resources');
     await expectScreenshot(page, 'helpful-links');
   });
 

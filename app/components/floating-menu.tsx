@@ -1,7 +1,5 @@
 "use client"
 
-import { Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { 
   Sheet, 
   SheetContent, 
@@ -24,14 +22,11 @@ export function FloatingMenu() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          className="h-16 w-16 hover:bg-primary-foreground/10 [&:hover>svg]:text-primary-foreground"
-        >
-          <Menu className="h-12 w-12 stroke-[3] text-primary-foreground" />
-          <span className="sr-only">Open menu</span>
-        </Button>
+        <button className="h-10 w-10 flex flex-col justify-center items-center bg-transparent border-none cursor-pointer">
+          <span className="block w-6 h-0.5 bg-primary-foreground mb-1.5"></span>
+          <span className="block w-6 h-0.5 bg-primary-foreground mb-1.5"></span>
+          <span className="block w-6 h-0.5 bg-primary-foreground"></span>
+        </button>
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px]">
         <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
@@ -49,22 +44,22 @@ export function FloatingMenu() {
             Home
           </Link>
           <Link 
-            href="/helpful-links" 
+            href="/resources" 
             onClick={handleLinkClick}
             className={`text-xl hover:text-primary transition-colors ${
-              pathname === "/helpful-links" ? "text-primary font-semibold" : ""
+              pathname === "/resources" ? "text-primary font-semibold" : ""
             }`}
           >
-            Helpful Links
+            Resources
           </Link>
           <Link 
-            href="/video-resources" 
+            href="/videos" 
             onClick={handleLinkClick}
             className={`text-xl hover:text-primary transition-colors ${
-              pathname === "/video-resources" ? "text-primary font-semibold" : ""
+              pathname === "/videos" ? "text-primary font-semibold" : ""
             }`}
           >
-            Video Resources
+            Videos
           </Link>
           <Link 
             href="/trafficking" 
@@ -82,7 +77,7 @@ export function FloatingMenu() {
               pathname === "/contact" ? "text-primary font-semibold" : ""
             }`}
           >
-            Contact Us
+            Contact
           </Link>
         </nav>
       </SheetContent>
