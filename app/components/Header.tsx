@@ -29,11 +29,11 @@ export function Header() {
             <Link href="/contact" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Contact</Link>
           </div>
           <div className="flex gap-4 items-center">
+          <Link href={whatsapp} target="_blank" className="text-primary-foreground hidden md:flex">
+              <FaWhatsapp size={24} />
+            </Link>
             <Link href={facebook} target="_blank" className="text-primary-foreground hidden md:flex">
               <FaFacebook size={24} />
-            </Link>
-            <Link href={whatsapp} target="_blank" className="text-primary-foreground hidden md:flex">
-              <FaWhatsapp size={24} />
             </Link>
             <Link href={`mailto:${email}`} className="text-primary-foreground hidden md:flex">
               <FaEnvelope size={24} />
