@@ -8,8 +8,7 @@ async function navigateAndWait(page: Page, path: string) {
 
 async function expectScreenshot(page: Page, name: string) {
   await expect(page).toHaveScreenshot(`${name}.png`, {
-    fullPage: true,
-    ...(process.env.CI ? { maxDiffPixelRatio: 0.03 } : {}),
+    fullPage: true
   });
 }
 
@@ -39,8 +38,7 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForTimeout(500);
     await expect(page).toHaveScreenshot('videos-expanded.png', {
       fullPage: true,
-      ...(process.env.CI ? { maxDiffPixelRatio: 0.03 } : {}),
-      maxDiffPixels: 5,
+      // maxDiffPixels: 5,
     });
   });
 
