@@ -1,0 +1,14 @@
+services:
+  # Base service with common configuration
+  playwright:
+    image: mcr.microsoft.com/playwright:v1.51.1-jammy
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - CI=true
+      - NEXT_PUBLIC_BASE_PATH=/stop
+    # Default command just runs the tests
+    command: npx start-server-and-test dev:silent http://localhost:3000 'playwright test'

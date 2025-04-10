@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { SocialMediaLinks } from './components/social-media-links';
 import { ContactForm } from './components/contact-form';
-import { Header } from "../components/Header";
+
 
 export default function ContactPage() {
   return (

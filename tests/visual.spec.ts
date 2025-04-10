@@ -8,8 +8,7 @@ async function navigateAndWait(page: Page, path: string) {
 
 async function expectScreenshot(page: Page, name: string) {
   await expect(page).toHaveScreenshot(`${name}.png`, {
-    fullPage: true,
-    ...(process.env.CI ? { maxDiffPixelRatio: 0.03 } : {}),
+    fullPage: true
   });
 }
 
@@ -37,11 +36,7 @@ test.describe('Visual Regression Tests', () => {
       });
     });
     await page.waitForTimeout(500);
-    await expect(page).toHaveScreenshot('videos-expanded.png', {
-      fullPage: true,
-      ...(process.env.CI ? { maxDiffPixelRatio: 0.03 } : {}),
-      maxDiffPixels: 5,
-    });
+    await expectScreenshot(page, 'videos-expanded');
   });
 
 
@@ -72,6 +67,7 @@ test.describe('Visual Regression Tests', () => {
     for (let i = 0; i < limit; i++) {
       await toggles.nth(i).click();
     }
+    await page.waitForTimeout(500);
     await expectScreenshot(page, 'trafficking-risk-factors');
   });
 });

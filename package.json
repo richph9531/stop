@@ -8,8 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "start-server-and-test dev:silent http://localhost:3000 \"playwright test\"",
-    "test:update": "start-server-and-test dev:silent http://localhost:3000 \"playwright test --update-snapshots\""
+    "test:ci": "start-server-and-test dev:silent http://localhost:3000 \"playwright test\"",
+    "test:local": "docker-compose run --rm playwright",
+    "test:local:update": "docker-compose run --rm playwright npx start-server-and-test dev:silent http://localhost:3000 'playwright test --update-snapshots'"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
