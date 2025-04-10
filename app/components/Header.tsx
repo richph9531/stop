@@ -12,9 +12,6 @@ export function Header() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between gap-2 md:gap-4">
           <div className="flex items-center gap-2">
-            <div className="md:hidden">
-              <FloatingMenu />
-            </div>
             <Link href="/" className="header-link py-4">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
                 <span className="text-red-500">S</span>tanding 
@@ -25,13 +22,13 @@ export function Header() {
             </Link>
           </div>
           <div className="hidden md:flex gap-4">
-            <Link href="/" className="text-primary-foreground">Home</Link>
-            <Link href="/helpful-links" className="text-primary-foreground">Helpful Links</Link>
-            <Link href="/video-resources" className="text-primary-foreground">Video Resources</Link>
-            <Link href="/trafficking" className="text-primary-foreground">Trafficking</Link>
-            <Link href="/contact" className="text-primary-foreground">Contact Us</Link>
+            <Link href="/" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Home</Link>
+            <Link href="/resources" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Resources</Link>
+            <Link href="/videos" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Videos</Link>
+            <Link href="/trafficking" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Trafficking</Link>
+            <Link href="/contact" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Contact</Link>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <Link href={facebook} target="_blank" className="text-primary-foreground hidden md:flex">
               <FaFacebook size={24} />
             </Link>
@@ -41,6 +38,9 @@ export function Header() {
             <Link href={`mailto:${email}`} className="text-primary-foreground hidden md:flex">
               <FaEnvelope size={24} />
             </Link>
+            <div className="md:hidden">
+              <FloatingMenu />
+            </div>
           </div>
         </div>
       </div>
