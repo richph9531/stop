@@ -36,10 +36,7 @@ test.describe('Visual Regression Tests', () => {
       });
     });
     await page.waitForTimeout(500);
-    await expect(page).toHaveScreenshot('videos-expanded.png', {
-      fullPage: true,
-      // maxDiffPixels: 5,
-    });
+    await expectScreenshot(page, 'videos-expanded');
   });
 
 
@@ -70,6 +67,7 @@ test.describe('Visual Regression Tests', () => {
     for (let i = 0; i < limit; i++) {
       await toggles.nth(i).click();
     }
+    await page.waitForTimeout(500);
     await expectScreenshot(page, 'trafficking-risk-factors');
   });
 });
