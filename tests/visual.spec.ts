@@ -3,7 +3,7 @@ import { test, expect, Page } from '@playwright/test';
 async function navigateAndWait(page: Page, path: string) {
   await page.goto(path);
   await page.waitForLoadState('networkidle');
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(500);
 }
 
 async function expectScreenshot(page: Page, name: string) {
@@ -16,7 +16,7 @@ test.describe('Visual Regression Tests', () => {
   test('homepage visual comparison', async ({page}, testinfo) => {
     testinfo.snapshotSuffix = ''; 
     await navigateAndWait(page, '/');
-    await expectScreenshot(page, 'homepage');
+    await expectScreenshot(page, 'home');
   });
 
   test('videos', async ({ page }, testinfo) => {
@@ -43,13 +43,13 @@ test.describe('Visual Regression Tests', () => {
   test('resources', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
     await navigateAndWait(page, '/resources');
-    await expectScreenshot(page, 'helpful-links');
+    await expectScreenshot(page, 'resources');
   });
 
   test('contact', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
     await navigateAndWait(page, '/contact');
-    await expectScreenshot(page, 'contact-us');
+    await expectScreenshot(page, 'contact');
   });
 
   test('trafficking - impact', async ({ page }, testinfo) => {
