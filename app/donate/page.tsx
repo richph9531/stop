@@ -33,7 +33,12 @@ export default function DonatePage() {
           <CardDescription>Fast, secure, and convenient</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col items-center">
-          <div className="relative w-[350px] h-[350px] mb-6">
+          <Link 
+            href="https://pos.snapscan.io/qr/nTaDH2AG" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="relative w-[350px] h-[350px] mb-6 block cursor-pointer hover:opacity-90 transition-opacity"
+          >
             <Image
               src={snapScanQR}
               alt="SnapScan QR Code for donations"
@@ -43,7 +48,8 @@ export default function DonatePage() {
               sizes="350px"
               quality={90}
             />
-          </div>
+
+          </Link>
           
           <h3 className="text-lg font-semibold mb-2">How to donate using SnapScan:</h3>
           <ol className="list-decimal pl-5 space-y-2 mb-6">
