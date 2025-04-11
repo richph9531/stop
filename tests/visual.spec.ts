@@ -19,13 +19,13 @@ test.describe('Visual Regression Tests', () => {
     await expectScreenshot(page, 'homepage');
   });
 
-  test('videos page visual comparison', async ({ page }, testinfo) => {
+  test('videos', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
     await navigateAndWait(page, '/videos');
     await expectScreenshot(page, 'videos');
   });
 
-  test('videos (expanded) page visual comparison', async ({ page }, testinfo) => {
+  test('videos (expanded)', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
     await navigateAndWait(page, '/videos');
     await page.evaluate(() => {
@@ -40,13 +40,13 @@ test.describe('Visual Regression Tests', () => {
   });
 
 
-  test('helpful links', async ({ page }, testinfo) => {
+  test('resources', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
     await navigateAndWait(page, '/resources');
     await expectScreenshot(page, 'helpful-links');
   });
 
-  test('contact us', async ({ page }, testinfo) => {
+  test('contact', async ({ page }, testinfo) => {
     testinfo.snapshotSuffix = '';
     await navigateAndWait(page, '/contact');
     await expectScreenshot(page, 'contact-us');
@@ -69,5 +69,11 @@ test.describe('Visual Regression Tests', () => {
     }
     await page.waitForTimeout(500);
     await expectScreenshot(page, 'trafficking-risk-factors');
+  });
+
+  test('donate', async ({ page }, testinfo) => {
+    testinfo.snapshotSuffix = '';
+    await navigateAndWait(page, '/donate');
+    await expectScreenshot(page, 'donate');
   });
 });

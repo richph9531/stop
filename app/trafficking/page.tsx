@@ -1,6 +1,6 @@
 "use client"
 
-import { BarChart3, Globe, Users, ChevronDown, ChevronUp } from "lucide-react"
+import { BarChart3, Globe, Users, ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -406,9 +406,10 @@ export default function TraffickingStatsPage() {
                   href="https://www.unodc.org/unodc/en/frontpage/2024/May/8-facts-you-need-to-know-about-human-trafficking-in-the-21st-century.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-primary hover:underline inline-flex items-center"
                 >
                   UNODC: 8 Facts About Human Trafficking in the 21st Century
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </li>
               <li>
@@ -416,9 +417,10 @@ export default function TraffickingStatsPage() {
                   href="https://www.unodc.org/unodc/en/human-trafficking/faqs.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-primary hover:underline inline-flex items-center"
                 >
                   UNODC: Frequently Asked Questions About Human Trafficking
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </li>
               <li>
@@ -426,9 +428,10 @@ export default function TraffickingStatsPage() {
                   href="https://preventht.org/human-trafficking-101/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-primary hover:underline inline-flex items-center"
                 >
                   PreventHT: Human Trafficking 101
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </li>
               <li>
@@ -436,9 +439,10 @@ export default function TraffickingStatsPage() {
                   href="https://www.ilo.org/topics-and-sectors/forced-labour-modern-slavery-and-trafficking-persons"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-primary hover:underline inline-flex items-center"
                 >
                   ILO: Forced Labour, Modern Slavery and Human Trafficking
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </li>
               <li>
@@ -446,9 +450,10 @@ export default function TraffickingStatsPage() {
                   href="https://www.disrupthumantrafficking.com/statistics"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-primary hover:underline inline-flex items-center"
                 >
                   Disrupt Human Trafficking: Statistics
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </li>
               <li>
@@ -456,9 +461,10 @@ export default function TraffickingStatsPage() {
                   href="https://traffickinghub.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-primary hover:underline inline-flex items-center"
                 >
                   TraffickingHub
+                  <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </li>
             </ul>

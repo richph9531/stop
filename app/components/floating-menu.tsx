@@ -79,6 +79,15 @@ export function FloatingMenu() {
           >
             Contact
           </Link>
+          <Link 
+            href="/donate" 
+            onClick={handleLinkClick}
+            className={`text-xl hover:text-primary transition-colors ${
+              pathname === "/donate" ? "text-primary font-semibold" : ""
+            }`}
+          >
+            Donate
+          </Link>
         </nav>
       </SheetContent>
     </Sheet>

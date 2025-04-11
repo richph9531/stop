@@ -27,6 +27,7 @@ export function Header() {
             <Link href="/videos" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Videos</Link>
             <Link href="/trafficking" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Trafficking</Link>
             <Link href="/contact" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Contact</Link>
+            <Link href="/donate" className="text-primary-foreground hover:text-red-500 transition-colors font-medium">Donate</Link>
           </div>
           <div className="flex gap-4 items-center">
           <Link href={whatsapp} target="_blank" className="text-primary-foreground hidden md:flex">
