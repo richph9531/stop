@@ -4,11 +4,6 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 import snapScanQR from '@/public/snapscan-qr.png'
 
-export const metadata = {
-  title: 'Donate | S.T.O.P.',
-  description: 'Support our mission with a SnapScan donation',
-}
-
 export default function DonatePage() {
   return (
     <div className="space-y-6">

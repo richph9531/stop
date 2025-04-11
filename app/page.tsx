@@ -2,6 +2,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Image from "next/image"
 import heroImage from '@/public/hero-image.jpg'
 
+export const metadata = {
+  title: 'Home | S.T.O.P.',
+  description: 'Standing Together to Oppose Pornography - Supporting individuals to break free from pornography addiction and build healthier lives',
+}
+
 export default function HomePage() {
   return (
     <>
