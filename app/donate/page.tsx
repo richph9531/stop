@@ -51,6 +51,18 @@ export default function DonatePage() {
 
           </Link>
           
+          <p className="mb-3">
+            <Link 
+              href="https://pos.snapscan.io/qr/nTaDH2AG" 
+              className="text-blue-600 hover:underline inline-flex items-center text-lg font-bold" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Or Click Here
+              <ExternalLink className="ml-1 h-4 w-4" />
+            </Link>
+          </p>
+          
           <h3 className="text-lg font-semibold mb-2">How to donate using SnapScan:</h3>
           <ol className="list-decimal pl-5 space-y-2 mb-6">
             <li>Open the SnapScan app on your smartphone</li>
